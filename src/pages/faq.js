@@ -11,11 +11,11 @@ import pic10 from '../assets/images/pic10.jpg'
 const Faq = (props) => (
     <Layout>
         <Helmet>
-            <title>Landing - Forty by HTML5 UP</title>
+            <title>FAQ - CTR Capital</title>
             <meta name="description" content="Landing Page" />
         </Helmet>
 
-        <BannerLanding />
+        <BannerLanding name="FAQ" />
 
         <div id="main">
             <section id="one">

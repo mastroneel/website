@@ -28,23 +28,24 @@ const Contact = (props) => (
                     <div className="contact-method">
                         <span className="icon alt fa-envelope"></span>
                         <h3>Email</h3>
-                        <a href="#">information@untitled.tld</a>
+                        <a href="#">fund@ctr.capital</a>
                     </div>
                 </section>
                 <section>
                     <div className="contact-method">
                         <span className="icon alt fa-phone"></span>
                         <h3>Phone</h3>
-                        <span>(000) 000-0000 x12387</span>
+                        <span>+1 778 785 6800 (Canada)</span><br />
+                        <span>+1 909 345 6800 (United States)</span>
                     </div>
                 </section>
                 <section>
                     <div className="contact-method">
                         <span className="icon alt fa-home"></span>
                         <h3>Address</h3>
-                        <span>1234 Somewhere Road #5432<br />
-                        Nashville, TN 00000<br />
-                        United States of America</span>
+                        <span>612 View Street 6th Floor<br />
+                        Victoria, BC V8W 1J5<br />
+                        Canada</span>
                     </div>
                 </section>
             </section>

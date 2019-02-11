@@ -9,7 +9,7 @@ The way our minds work, what we’re currently thinking about, exploring and our
 
 CTR Group of Companies have spent over a decade running HFT ads compiling rich data and actionable insights into consumption. We have shifted our focus from extracting value towards deeply understanding behaviour through our compiled BIG data and we are using that to empower and measure impact by taking advantage of AI and machine learning. (https://ctr.com/)
 
-CTR has been running a private fund of early stage disruptive investments over the past five years and there has been considerable demand to partake in these opportunities and due to our strong network of connectors and influencers we are able to secure large chunks of allocation for the fund.
+CTR has been running a private fund of early stage disruptive investments over the past five years and there has been considerable demand to partake in these opportunities and due to  our strong network of connectors and influencers we are able to secure large chunks of allocation for the fund.
 
 Gordy and Aaron have been partners for over 12 years and work in a realm of “Everything is Possible”.
 

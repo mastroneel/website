@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Forty V2',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js V2 Starter based on Forty by HTML5 UP',
+    title: 'CTR Capital',
+    author: 'Tamaz Kertez',
+    description: 'CTR Capital - A community of socially-responsible, impact investors who fund initiatives that raise human consciousness, generating Return on Investment and Return on Impact a result called “Double ROI”.',
   },
   plugins: [
     {

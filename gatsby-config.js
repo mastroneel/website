@@ -13,6 +13,13 @@ module.exports = {
         name: 'markdown-pages'
       }
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/pages/`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     {

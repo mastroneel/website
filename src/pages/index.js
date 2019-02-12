@@ -42,6 +42,17 @@ export default ({ data }) => {
               </Link>
             </article>
           ))}
+          <article style={{ backgroundImage: `url(${ banners[5] })` }}>
+            <Link
+              to="/faq"
+              className="main-tile link primary"
+            >
+              <header className="major">
+                <h3>The Answers You Want to Know</h3>
+                <p>These are some of the most frequent questions asked of us and our responses</p>
+              </header>
+            </Link>
+          </article>
         </section>
         <section id="two">
           <div className="inner">

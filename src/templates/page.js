@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import BannerLanding from '../components/BannerLanding'
 
@@ -9,7 +8,7 @@ export default ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout>
+    <>
       <SEO title={frontmatter.title} />
       <BannerLanding
         name={frontmatter.title}
@@ -29,7 +28,7 @@ export default ({ data }) => {
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   )
 }
 

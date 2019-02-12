@@ -60,7 +60,8 @@ The Return on Impact is judged by:
 - What is the impact the company makes on local markets and regional economies
 - How does the company show it cares.
   · How does the company rate at a macro level when compared against the UN’s 17 Sustainable Development Goals (SDGs) for transforming our world.
-  The criteria for measuring Return on Investment for each company in the CCF include:
+
+The criteria for measuring Return on Investment for each company in the CCF include:
 - How does the capital grow
 - What time frame does it take the company to break even or result in net profit when exploring a new or revised revenue stream
 - What does the company do with the free cash flow resulting from growth

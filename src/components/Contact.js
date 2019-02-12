@@ -7,7 +7,17 @@ const Contact = props => (
         <form
           method="post"
           action="#"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
         >
+          <input
+            type="hidden"
+            name="form-name"
+            value="contact"
+          />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
           <div className="field half first">
             <label htmlFor="name">Name</label>
             <input
@@ -30,44 +40,53 @@ const Contact = props => (
               name="message"
               id="message"
               rows="6"
-            ></textarea>
+            />
           </div>
           <ul className="actions">
-            <li><input
-              type="submit"
-              value="Send Message"
-              className="special"
-            /></li>
-            <li><input
-              type="reset"
-              value="Clear"
-            /></li>
+            <li>
+              <input
+                type="submit"
+                value="Send Message"
+                className="special"
+              />
+            </li>
+            <li>
+              <input
+                type="reset"
+                value="Clear"
+              />
+            </li>
           </ul>
         </form>
       </section>
       <section className="split">
         <section>
           <div className="contact-method">
-            <span className="icon alt fa-envelope"></span>
+            <span className="icon alt fa-envelope" />
             <h3>Email</h3>
             <a href="#">fund@ctr.capital</a>
           </div>
         </section>
         <section>
           <div className="contact-method">
-            <span className="icon alt fa-phone"></span>
+            <span className="icon alt fa-phone" />
             <h3>Phone</h3>
-            <span>+1 778 785 6800 (Canada)</span><br />
+            <span>+1 778 785 6800 (Canada)</span>
+            <br />
             <span>+1 909 345 6800 (United States)</span>
           </div>
         </section>
         <section>
           <div className="contact-method">
-            <span className="icon alt fa-home"></span>
+            <span className="icon alt fa-home" />
             <h3>Address</h3>
-            <span>612 View Street 6th Floor<br />
-                        Victoria, BC V8W 1J5<br />
-                        Canada</span>
+            <span>
+              612 View Street 6th Floor
+              <br />
+              Victoria, BC V8W 1J5
+              <br />
+              Canada
+            </span>
           </div>
         </section>
       </section>

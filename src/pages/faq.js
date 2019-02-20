@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from '../components/SEO'
-import pic11 from '../assets/images/pic11.jpg'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
   const { edges: faq } = data.allFaqJson
@@ -21,12 +20,7 @@ export default ({ data }) => {
               <h1>The Answers You Want to Know</h1>
               <p>These are some of the most frequent questions asked of us and our responses</p>
             </header>
-            <span className="image main">
-              <img
-                src={pic11}
-                alt=""
-              />
-            </span>
+            <span className="image main" />
             {faq.map(entry => (
               <div key={entry.node.id}>
                 <h2>{entry.node.section}</h2>

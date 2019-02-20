@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from '../components/SEO'
-import BannerLanding from '../components/BannerLanding'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
@@ -10,10 +9,8 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={frontmatter.title} />
-      <BannerLanding
-        name={frontmatter.title}
-        intro={frontmatter.intro}
-      />
+      {frontmatter.title}
+      {frontmatter.intro}
       <div
         id="main"
         className="alt"

@@ -1,4 +1,5 @@
 import React from 'react'
+import {CollapsibleComponent, CollapsibleHead, CollapsibleContent} from 'react-collapsible-component'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 
@@ -24,12 +25,16 @@ export default ({ data }) => {
             {faq.map(entry => (
               <div key={entry.node.id}>
                 <h2>{entry.node.section}</h2>
-                {entry.node.faq.map((qa, idx) => (
-                  <div key={idx}>
-                    <h4>{qa.q}</h4>
-                    <p>{qa.a}</p>
-                  </div>
-                ))}
+                <CollapsibleComponent>
+                  {entry.node.faq.map((qa, idx) => (
+                    <div key={idx}>
+                      <CollapsibleHead>{qa.q}</CollapsibleHead>
+                      <CollapsibleContent>
+                        <p>{qa.a}</p>
+                      </CollapsibleContent>
+                    </div>
+                  ))}
+                </CollapsibleComponent>
               </div>
             ))}
           </div>

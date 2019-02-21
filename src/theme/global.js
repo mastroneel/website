@@ -35,6 +35,11 @@ const GlobalStyle = createGlobalStyle`
         width: 1170px;
     }
   }
+  .accordion-head {
+    background-color: #FFF !important;
+    color: #000 !important;
+    border-bottom: 1px solid #000 !important;
+  }
 `
 
 export default GlobalStyle

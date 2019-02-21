@@ -40,6 +40,9 @@ const GlobalStyle = createGlobalStyle`
     color: #000 !important;
     border-bottom: 1px solid #000 !important;
   }
+  .panel-accordion {
+    transition: all 0.3s ease !important;
+  }
 `
 
 export default GlobalStyle

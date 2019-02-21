@@ -35,13 +35,28 @@ const GlobalStyle = createGlobalStyle`
         width: 1170px;
     }
   }
-  .accordion-head {
-    background-color: #FFF !important;
-    color: #000 !important;
-    border-bottom: 1px solid #000 !important;
+  .Collapsible {
+    border-top: 2px solid ${ props => props.theme.color.dark };
+    padding:10px 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
-  .panel-accordion {
-    transition: all 0.3s ease !important;
+  .Collapsible:hover{
+    color: ${ props => props.theme.color.pink };
+    border-top: 2px solid ${ props => props.theme.color.pink };
+  }
+  .Collapsible:hover + div {
+    border-top: 2px solid ${ props => props.theme.color.pink };
+  }
+  .is-open {
+    font-weight:bolder;
+    color: ${ props => props.theme.color.dark };
+  }
+  .Collapsible__contentOuter {
+    color: ${ props => props.theme.color.dark };
+  }
+  .faq:last-child {
+    border-bottom: 2px solid ${ props => props.theme.color.dark };
   }
 `
 

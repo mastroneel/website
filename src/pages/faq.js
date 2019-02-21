@@ -26,7 +26,7 @@ export default ({ data }) => {
               <div key={entry.node.id}>
                 <h2>{entry.node.section}</h2>
                 {entry.node.faq.map((qa, idx) => (
-                  <div key={idx}>
+                  <div key={idx} className="faq">
                     <Collapsible trigger={qa.q}>
                       <p>{qa.a}</p>
                     </Collapsible>

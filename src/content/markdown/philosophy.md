@@ -5,16 +5,6 @@ intro: '
 The way our minds work, what we’re currently thinking about, exploring and our continued revelations.'
 ---
 
-## History
-
-CTR Group of Companies have spent over a decade running HFT ads compiling rich data and actionable insights into consumption. We have shifted our focus from extracting value towards deeply understanding behaviour through our compiled BIG data and we are using that to empower and measure impact by taking advantage of AI and machine learning. (https://ctr.com/)
-
-CTR has been running a private fund of early stage disruptive investments over the past five years and there has been considerable demand to partake in these opportunities and due to  our strong network of connectors and influencers we are able to secure large chunks of allocation for the fund.
-
-Gordy and Aaron have been partners for over 12 years and work in a realm of “Everything is Possible”.
-
-Conscious Thought Revolution (CTR) has had the pleasure and opportunity to work with countless founders, investors and companies in the past decade. While this is not experience as a Venture Capital entity, we believe it does show traction and offers some insight into the capabilities of the founding team.
-
 ## Network Effect
 
 We are well-connected with a diverse network of investors who are open to opportunities at an earlier stage of development. As these connections and relationships grow, we believe that CCF will be seen as a leader in the Conscious Capital space.

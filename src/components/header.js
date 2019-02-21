@@ -16,7 +16,7 @@ const HeaderStyle = styled.header`
   left: 0;
   border-bottom: 1px solid ${ props => rgba(props.theme.color.dark, 0.12) };
   height: ${ props => props.theme.header.height };
-
+  background: ${ props => props.theme.header.background };
   a {
     display: inline-block;
   }

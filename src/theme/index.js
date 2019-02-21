@@ -8,9 +8,10 @@ export default {
   },
   header: {
     height: '8rem',
+    background: '#FFF',
   },
   text: {
-    baseSize: '1.7em',
+    baseSize: '1.8rem',
     fontFamily: 'Muli, sans-serif',
   },
   breakpoints: {

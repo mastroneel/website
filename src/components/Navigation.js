@@ -59,9 +59,9 @@ const Navigation = () => (
     </Link>
     <Link
       activeClassName="active"
-      to="/portfolio"
+      to="/companies"
     >
-      Portfolio
+      Companies
     </Link>
     <Link
       activeClassName="active"

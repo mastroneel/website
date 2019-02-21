@@ -17,21 +17,21 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${ props => props.theme.text.baseSize };
     margin-top: ${ props => props.theme.header.height };
   }
-  .inner {
+  .inner, .major {
     margin:auto;
   }
   @media (min-width: 768px) {
-    .inner {
+    .inner, .major {
       width:750px;
     }
   }
   @media (min-width: 992px) {
-    .inner {
+    .inner, .major {
         width: 970px;
     }
   }
   @media (min-width: 1200px) {
-    .inner {
+    .inner, .major {
         width: 1170px;
     }
   }
@@ -57,6 +57,21 @@ const GlobalStyle = createGlobalStyle`
   }
   .faq:last-child {
     border-bottom: 2px solid ${ props => props.theme.color.dark };
+  }
+  .major {
+    min-height:100vh;
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 20vh; /*spacing*/
+  }
+  .arrow-icon-wrapper {
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    left: 50%;
+    padding: 0;
+    margin-left: -26px;
+    z-index: 90;
   }
 `
 

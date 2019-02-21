@@ -3,6 +3,8 @@ import 'normalize.css'
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
   }
 

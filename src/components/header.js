@@ -5,14 +5,16 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 
 import logo from '../images/logo-inline.svg'
-import { Container } from './ui/Grid'
+import { Container, Row, Column } from './ui/Grid'
+import Navigation from './Navigation'
+import Button from './ui/Buttons'
 
 const HeaderStyle = styled.header`
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  border-bottom: 1px solid ${ props => rgba(props.theme.colors.dark, 0.12) };
+  border-bottom: 1px solid ${ props => rgba(props.theme.color.dark, 0.12) };
   height: ${ props => props.theme.header.height };
 
   a {
@@ -27,18 +29,39 @@ const Logo = styled.div`
   height: 40px;
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <HeaderStyle>
     <Container>
-      <Link to="/">
-        <Logo />
-      </Link>
+      <Row
+        align="center"
+        justify="space-between"
+      >
+        <Column>
+          <Link to="/">
+            <Logo />
+          </Link>
+        </Column>
+        <Column>
+          <Navigation />
+        </Column>
+        <Column>
+          <Button
+            as="a"
+            primary={true}
+            href="mailto:fund@ctr.capital"
+            alt="Get in touch"
+            target="_blank"
+          >
+            Get in Touch
+          </Button>
+        </Column>
+      </Row>
     </Container>
   </HeaderStyle>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 }
 
 export default Header

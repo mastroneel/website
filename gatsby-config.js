@@ -3,29 +3,29 @@ module.exports = {
     title: 'CTR Capital',
     author: 'Tamas Kertesz',
     description:
-			'CTR Capital - A community of socially-responsible, impact investors who fund initiatives that raise human consciousness, generating Return on Investment and Return on Impact a result called “Double ROI”.'
+      'CTR Capital - A community of socially-responsible, impact investors who fund initiatives that raise human consciousness, generating Return on Investment and Return on Impact a result called “Double ROI”.',
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${ __dirname }/src/content/markdown`,
-        name: 'markdown-pages'
-      }
+        name: 'markdown-pages',
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./src/content/json/`,
-        name: 'json-content'
-      }
+        name: 'json-content',
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${ __dirname }/src/images`
-      }
+        path: `${ __dirname }/src/images`,
+      },
     },
     `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
@@ -35,14 +35,14 @@ module.exports = {
       options: {
         useMozJpeg: false,
         stripMetadata: true,
-        defaultQuality: 80
-      }
+        defaultQuality: 80,
+      },
     },
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/templates/layout.js`)
-      }
+        component: require.resolve(`./src/templates/layout.js`),
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -51,9 +51,9 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Muli:400,700']
-        }
-      }
+          families: ['Muli:400,700,900'],
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -64,8 +64,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
-      }
-    }
-  ]
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+  ],
 }

@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${ props => props.theme.text.fontFamily };
     font-size: ${ props => props.theme.text.baseSize };
     margin-top: ${ props => props.theme.header.height };
+    line-height: 1.745;
   }
   .inner, .major {
     margin:auto;

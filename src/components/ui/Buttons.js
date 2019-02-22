@@ -38,6 +38,7 @@ const Button = styled.button`
   padding: 1em 1.6em;
   position: relative;
   transition: all 0.15s ease-in-out;
+  cursor: pointer;
   ${ ({ appearance }) => appearance === 'primary' && Primary };
   ${ ({ appearance }) => appearance === 'secondary' && Secondary };
 

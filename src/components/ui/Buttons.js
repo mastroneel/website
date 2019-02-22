@@ -1,19 +1,45 @@
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { rgba, lighten } from 'polished'
+
+const Primary = css`
+  background-color: ${ props => lighten(0.375, props.theme.color.pink) };
+  color: ${ props => props.theme.color.pink };
+
+  :hover {
+    background-color: ${ props => props.theme.color.blue };
+  }
+
+  &::after {
+    border-color: ${ props => props.theme.color.pink };
+  }
+`
+
+const Secondary = css`
+  background-color: ${ props => lighten(0.6, props.theme.color.blue) };
+  color: ${ props => props.theme.color.blue };
+
+  :hover {
+    background-color: ${ props => props.theme.color.pink };
+    color: #fff;
+  }
+
+  &::after {
+    border-color: ${ props => props.theme.color.yellow };
+  }
+`
 
 const Button = styled.button`
   border: 0;
   display: inline-block;
-  background-color: ${ props =>
-    props.primary ? lighten(0.375, props.theme.color.pink) : rgba(props.theme.color.dark, 0.1) };
-  color: ${ props => (props.primary ? props.theme.color.pink : props.theme.color.dark) };
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 700;
   padding: 1em 1.6em;
   position: relative;
   transition: all 0.15s ease-in-out;
+  ${ ({ appearance }) => appearance === 'primary' && Primary };
+  ${ ({ appearance }) => appearance === 'secondary' && Secondary };
 
   ::after {
     content: '';
@@ -22,7 +48,8 @@ const Button = styled.button`
     position: absolute;
     top: 0;
     right: 0;
-    border: 4px solid ${ props => props.theme.color.pink };
+    border-width: 4px;
+    border-style: solid;
     z-index: -1;
     transform: translate(0, 0);
     opacity: 0;
@@ -30,8 +57,6 @@ const Button = styled.button`
   }
 
   :hover {
-    background-color: ${ props => props.theme.color.blue };
-
     ::after {
       opacity: 1;
       transform: translate(0.7em, -0.65em);
@@ -40,7 +65,7 @@ const Button = styled.button`
 `
 
 Button.propTypes = {
-  primary: PropTypes.bool,
+  appearance: PropTypes.oneOf(['primary', 'secondary']).isRequired,
 }
 
 export default Button

@@ -16,7 +16,7 @@ const Nav = styled.nav`
     ::after {
       content: '';
       position: absolute;
-      bottom: -1.45em;
+      bottom: -1.165em;
       left: 0;
       width: 100%;
       height: 2px;

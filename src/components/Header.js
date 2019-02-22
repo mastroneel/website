@@ -16,7 +16,7 @@ const HeaderStyle = styled.header`
   left: 0;
   border-bottom: 1px solid ${ props => rgba(props.theme.color.dark, 0.12) };
   height: ${ props => props.theme.header.height };
-
+  background: ${ props => props.theme.header.background };
   a {
     display: inline-block;
   }
@@ -47,7 +47,7 @@ const Header = () => (
         <Column>
           <Button
             as="a"
-            primary={true}
+            appearance="primary"
             href="mailto:fund@ctr.capital"
             alt="Get in touch"
             target="_blank"
@@ -59,9 +59,5 @@ const Header = () => (
     </Container>
   </HeaderStyle>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
 
 export default Header

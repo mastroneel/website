@@ -9,7 +9,7 @@ const Small = styled.small`
 
 const Header = styled.h1`
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 3px;
   color: #fff;
   margin-top: 0;
 `

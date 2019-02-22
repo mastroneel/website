@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from '../theme'
 import GlobalStyles from '../theme/global'
 import { Container } from '../components/ui/Grid'
-import Header from '../components/header'
+import Header from '../components/Header'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,7 +32,7 @@ const Layout = ({ children }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

@@ -1,102 +1,88 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
+import { rgba, lighten, linearGradient } from 'polished'
 
-import Banner from '../components/Banner'
-import SEO from '../components/SEO'
+import { Container, Row, Column } from '../components/ui/Grid'
+import Image from '../components/image'
+import SEO from '../components/seo'
+import Heading from '../components/ui/Heading'
+import Button from '../components/ui/Buttons'
 
-import pic01 from '../assets/images/pic01.jpg'
-import pic02 from '../assets/images/pic02.jpg'
-import pic03 from '../assets/images/pic03.jpg'
-import pic04 from '../assets/images/pic04.jpg'
-import pic05 from '../assets/images/pic05.jpg'
-import pic06 from '../assets/images/pic06.jpg'
+import office from '../images/office.jpg'
 
-const banners = [pic01, pic02, pic03, pic04, pic05, pic06]
+const Welcome = styled.div`
+  background-color: ${ props => props.theme.color.blue };
+  background: linear-gradient(
+      ${ props => rgba(props.theme.color.blue, 0.93) },
+      ${ props => rgba(props.theme.color.blue, 0.97) }
+    ),
+    url(${ office });
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  margin-top: 8em;
+  padding: 4em;
+  position: relative;
+  box-shadow: 0 0 0 5px #fff;
 
-export default ({ data }) => {
-  const { edges: pages } = data.allMarkdownRemark
+  strong {
+    font-weight: 700;
+    color: ${ props => props.theme.color.pink };
+  }
 
-  console.log(pages)
-  return (
-    <>
-      <Banner />
-      <div id="main">
-        <SEO title="Home" />
-        <section
-          id="one"
-          className="tiles"
-        >
-          {pages.map((page, idx) => (
-            <article
-              key={page.node.id}
-              style={{ backgroundImage: `url(${ banners[idx] })` }}
-            >
-              <Link
-                to={page.node.fields.slug}
-                className="main-tile link primary"
-              >
-                <header className="major">
-                  <h3>{page.node.frontmatter.title}</h3>
-                  <p>{page.node.frontmatter.intro}</p>
-                </header>
-              </Link>
-            </article>
-          ))}
-          <article style={{ backgroundImage: `url(${ banners[5] })` }}>
-            <Link
-              to="/faq"
-              className="main-tile link primary"
-            >
-              <header className="major">
-                <h3>The Answers You Want to Know</h3>
-                <p>These are some of the most frequent questions asked of us and our responses</p>
-              </header>
-            </Link>
-          </article>
-        </section>
-        <section id="two">
-          <div className="inner">
-            <header className="major">
-              <h2>Massa libero</h2>
-            </header>
-            <p>
-              Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed
-              nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa
-              vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et
-              sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
-            </p>
-            <ul className="actions">
-              <li>
-                <Link
-                  to="/landing"
-                  className="button next"
-                >
-                  Get Started
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-}
+  ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    border: 10px solid ${ props => rgba(props.theme.color.pink, 0.1) };
+    transform: translate(1.8em, -1.8em);
+    z-index: -1;
+  }
 
-export const allPages = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            intro
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
+  p {
+    color: ${ props => lighten(0.6, props.theme.color.blue) };
+    max-width: 60%;
+    font-size: 2rem;
   }
 `
+
+const Index = () => (
+  <>
+    <SEO
+      title="Home"
+      keywords={[`gatsby`, `application`, `react`]}
+    />
+    <Container>
+      <Row>
+        <Column>
+          <Welcome>
+            <Heading small="about">Conscious Capital</Heading>
+            <p>
+              Financial capital that is raised, built, managed, and deployed strategically, for the purpose of raising
+              {` `}
+              <strong>human consciousness</strong> and expanding the scope of activities that can measurably improve
+              {` `}
+              <strong>world conditions</strong>. A way to change the world, live fulfilled through the impact you make,
+              and earn returns which have been proven to {` `}
+              <strong>outperform the status quo</strong>.
+            </p>
+            <Button
+              as={Link}
+              to="/philosophy"
+              appearance="secondary"
+            >
+              Our Philosophy
+            </Button>
+          </Welcome>
+        </Column>
+      </Row>
+    </Container>
+  </>
+)
+
+export default Index

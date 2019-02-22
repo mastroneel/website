@@ -1,55 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
 
-import '../assets/scss/main.scss'
-import Header from '../components/Header'
-import Menu from '../components/Menu'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
+import theme from '../theme'
+import GlobalStyles from '../theme/global'
+import { Container } from '../components/ui/Grid'
+import Header from '../components/header'
 
-class Layout extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      isMenuVisible: false,
-      loading: 'is-loading'
-    }
-    this.handleToggleMenu = this.handleToggleMenu.bind(this)
-  }
-
-  componentDidMount () {
-    this.timeoutId = setTimeout(() => {
-      this.setState({ loading: '' })
-    }, 100)
-  }
-
-  componentWillUnmount () {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId)
-    }
-  }
-
-  handleToggleMenu () {
-    this.setState({
-      isMenuVisible: !this.state.isMenuVisible
-    })
-  }
-
-  render () {
-    const { children } = this.props
-
-    return (
-      <div className={`body ${ this.state.loading } ${ this.state.isMenuVisible ? 'is-menu-visible' : '' }`}>
-        <div id="wrapper">
-          <Header onToggleMenu={this.handleToggleMenu} />
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <Header siteTitle={data.site.siteMetadata.title} />
           {children}
-          <Contact />
-          <Footer />
-        </div>
-        <Menu onToggleMenu={this.handleToggleMenu} />
-      </div>
-    )
-  }
+        </>
+      </ThemeProvider>
+    )}
+  />
+)
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default Layout

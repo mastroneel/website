@@ -1,7 +1,8 @@
 import React from 'react'
+import Collapsible from 'react-collapsible'
 import { graphql } from 'gatsby'
-import SEO from '../components/SEO'
-import pic11 from '../assets/images/pic11.jpg'
+import SEO from '../components/seo'
+import arrow from '../images/arrow.svg'
 
 export default ({ data }) => {
   const { edges: faq } = data.allFaqJson
@@ -20,20 +21,21 @@ export default ({ data }) => {
             <header className="major">
               <h1>The Answers You Want to Know</h1>
               <p>These are some of the most frequent questions asked of us and our responses</p>
+              <div className="arrow-icon-wrapper">
+                <a class="arrow-icon" href="" data-control-scrollto=".scrollto">
+                  <img src={arrow}/>
+                </a>
+              </div>
             </header>
-            <span className="image main">
-              <img
-                src={pic11}
-                alt=""
-              />
-            </span>
+            <span className="image main" />
             {faq.map(entry => (
               <div key={entry.node.id}>
                 <h2>{entry.node.section}</h2>
                 {entry.node.faq.map((qa, idx) => (
-                  <div key={idx}>
-                    <h4>{qa.q}</h4>
-                    <p>{qa.a}</p>
+                  <div key={idx} className="faq">
+                    <Collapsible trigger={qa.q}>
+                      <p>{qa.a}</p>
+                    </Collapsible>
                   </div>
                 ))}
               </div>

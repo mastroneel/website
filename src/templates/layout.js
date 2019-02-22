@@ -7,6 +7,7 @@ import theme from '../theme'
 import GlobalStyles from '../theme/global'
 import { Container } from '../components/ui/Grid'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,6 +26,7 @@ const Layout = ({ children }) => (
           <GlobalStyles />
           <Header siteTitle={data.site.siteMetadata.title} />
           {children}
+          <Footer />
         </>
       </ThemeProvider>
     )}

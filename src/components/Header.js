@@ -10,6 +10,8 @@ import Navigation from './Navigation'
 import Button from './ui/Buttons'
 
 const HeaderStyle = styled.header`
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   right: 0;
@@ -17,8 +19,22 @@ const HeaderStyle = styled.header`
   border-bottom: 1px solid ${ props => rgba(props.theme.color.dark, 0.12) };
   height: ${ props => props.theme.header.height };
   background: ${ props => props.theme.header.background };
+  z-index: 1000;
+
   a {
     display: inline-block;
+  }
+
+  ${ Column } {
+    &:nth-child(1) {
+      flex: 1 1 0;
+    }
+    &:nth-child(2) {
+      flex: 3 1 0;
+    }
+    &:nth-child(3) {
+      flex: 1 1 0;
+    }
   }
 `
 
@@ -32,19 +48,16 @@ const Logo = styled.div`
 const Header = () => (
   <HeaderStyle>
     <Container>
-      <Row
-        align="center"
-        justify="space-between"
-      >
+      <Row align="center">
         <Column>
           <Link to="/">
             <Logo />
           </Link>
         </Column>
-        <Column>
+        <Column align="center">
           <Navigation />
         </Column>
-        <Column>
+        <Column align="flex-end">
           <Button
             as="a"
             appearance="primary"

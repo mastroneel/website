@@ -74,6 +74,16 @@ const GlobalStyle = createGlobalStyle`
     margin-left: -26px;
     z-index: 90;
   }
+  footer a {
+    color: #FFF;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    transition: color .2s ease-in-out,border-bottom-color .2s ease-in-out;
+  }
+  footer a:hover {
+    border-bottom-color: transparent;
+    color: ${ props => props.theme.color.pink };
+  }
 `
 
 export default GlobalStyle

@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { rgba } from 'polished'
 
-import logo from '../images/logo-inline.svg'
+import logo from '../images/ctr_cap.svg'
 import { Container, Row, Column } from './ui/Grid'
 import Navigation from './Navigation'
 import Button from './ui/Buttons'
@@ -42,7 +42,7 @@ const Logo = styled.div`
   background-image: url(${ logo });
   background-repeat: no-repeat;
   width: 180px;
-  height: 40px;
+  height: 36px;
 `
 
 const Header = () => (

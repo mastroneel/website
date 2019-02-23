@@ -11,12 +11,12 @@ const InputGroup = styled.div`
 
   input,
   textarea {
-    background-color: ${ props => lighten(0.07, props.theme.color.dark) };
+    background-color: ${ props => props.theme.color.dark };
     color: ${ props => lighten(0.3, props.theme.color.grey) };
     padding: 0.8em 1.2em;
     border-style: solid;
     border-width: 3px;
-    border-color: transparent;
+    border-color: ${ props => props.theme.color.blue };
 
     :focus {
       border-color: ${ props => props.theme.color.pink };

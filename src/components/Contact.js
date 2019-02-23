@@ -43,6 +43,7 @@ const Contact = () => (
                   <input
                     type="text"
                     name="name"
+                    placeholder="Your Name"
                     style={{ marginRight: '1em' }}
                   />
                 </InputGroup>
@@ -53,6 +54,7 @@ const Contact = () => (
                   <input
                     type="email"
                     name="email"
+                    placeholder="your.name@email.com"
                   />
                 </InputGroup>
               </Column>
@@ -64,6 +66,7 @@ const Contact = () => (
                   <textarea
                     name="message"
                     rows="6"
+                    placeholder="We will get back to you as soon as possible"
                   />
                 </InputGroup>
                 <div data-netlify-recaptcha="true" />

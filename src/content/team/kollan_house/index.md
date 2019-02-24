@@ -1,6 +1,9 @@
 ---
-title: "Kollan House"
+name: 'Kollan House'
+title: 'Operations'
+image: 'kollan-house'
 ---
+![Kollan House](../../images/kollan-house.jpg)
 
 ## Story
 
@@ -18,9 +21,10 @@ Around this time, Kollan’s father was involved in some startups, such as a bla
 
 Kollan was left feeling depressed and living in his parents basement. Even with help for the depression, he could find no meaning in his life, and he attempted suicide. He was saved from a fatal jump from a 7-storey building by getting caught up in some wires. He was surrounded by love as a result and it was almost as though he had died and gone to heaven. People were worried that he would try suicide again, but he felt he had survived his best efforts to kill himself, so he focused on finding meaning by reading such authors as Eckhart Tolle.
 
-Life took a new turn when Kollan met Alex and Tim at a Hackathon in Washington. They invited him to move from Kentucky to join them in Baltimore to work in the field of cryptocurrency. Even though he was still limping from his fall, he moved in with them in their cramped quarters and that was the start of a very exciting time when they motivated each other to do well.
+Life took a new turn when Kollan met Alex at a Hackathon in Washington DC. They invited him to move from Kentucky to join them in Baltimore to work in the field of cryptocurrency. Even though he was still limping from his fall, he moved in with them in their cramped quarters and that was the start of a very exciting time when they motivated each other to do well.
 
 Then Kollan met up with Gordy and Aaron and came to BC – originally with Tim and Alex, but eventually they moved back to the US. During the past 4 years in BC, Kollan has struggled to be a successful entrepreneur and feels he has grown and found his own voice. He has discovered that there is a greater willingness to collaborate on the west coast and fewer man-eat-man business dealings.
 
 Kollan has learned from Gordy and Aaron about why conscious capital matters. He has worn many different hats, and has develop his innate abilities to be adaptable and problem solve. He has enjoyed applying the scientific method he learned as an engineer to efficiently solve challenges that involve humans.
+
 Now Kollan has a 20-year plan to be successful in business – and he then he wants to build a spaceship.

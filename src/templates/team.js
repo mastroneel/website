@@ -16,19 +16,10 @@ export default ({ data }) => {
         {console.log(data)}
         <section id="one">
           <div className="inner">
-            <header className="major">
-              <h1>{frontmatter.title}</h1>
-              <h2>{frontmatter.intro}</h2>
-              <small>{frontmatter.date}</small>
-              <div className="arrow-icon-wrapper">
-                <a
-                  class="arrow-icon"
-                  href=""
-                  data-control-scrollto=".scrollto"
-                >
-                  <img src={arrow} />
-                </a>
-              </div>
+            <header className="individual">
+              <h1>{frontmatter.name}</h1>
+              <h2>{frontmatter.title}</h2>
+              <small>{frontmatter.image}</small>
             </header>
             <span className="image main" />
             <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -44,7 +35,9 @@ export const teamQuery = graphql`
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
+        name
         title
+        image
       }
     }
   }

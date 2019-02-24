@@ -1,5 +1,6 @@
 ---
-title: "Brad Williams"
+name: "Brad Williams"
+title: 'Chief Financial Officer'
 ---
 
 ## Story

@@ -1,5 +1,6 @@
 ---
-title: "Aaron Samsonoff"
+name: "Aaron Samsonoff"
+title: 'General Partner, Co-Founder'
 ---
 
 ## Story

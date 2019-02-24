@@ -1,5 +1,6 @@
 ---
-title: "Nichol Bradford"
+name: "Nichol Bradford"
+title: 'Strategic Operations'
 ---
 
 ## Story

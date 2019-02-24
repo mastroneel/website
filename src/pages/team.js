@@ -32,7 +32,7 @@ export default ({ data }) => {
           <div className="team">
             <Container>
               {team.map(member => (
-                <Link to={member.node.fields.slug}>{member.node.frontmatter.title}</Link>
+                <Link to={member.node.fields.slug}>{member.node.frontmatter.name}</Link>
               ))}
             </Container>
           </div>

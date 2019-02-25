@@ -16,8 +16,8 @@ export default ({ data }) => {
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>Team</h1>
-            <h2>Here we are</h2>
+            <h1>Our Rockstar Team</h1>
+            <h2>With decades of experience in the world of startups and private placements.</h2>
             <div className="arrow-icon-wrapper">
               <a
                 class="arrow-icon"

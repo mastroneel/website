@@ -19,7 +19,6 @@ export default ({ data }) => {
             <header className="major">
               <h1>{frontmatter.title}</h1>
               <h2>{frontmatter.intro}</h2>
-              <small>{frontmatter.date}</small>
               <div className="arrow-icon-wrapper">
                 <a class="arrow-icon" href="" data-control-scrollto=".scrollto">
                   <img src={arrow}/>

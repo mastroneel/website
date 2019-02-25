@@ -20,7 +20,7 @@ export default ({ data }) => {
           <div className="inner">
             <header className="major">
               <h1>The Answers You Want to Know</h1>
-              <p>These are some of the most frequent questions asked of us and our responses</p>
+              <h2>These are some of the most frequent questions asked of us and our responses</h2>
               <div className="arrow-icon-wrapper">
                 <a class="arrow-icon" href="" data-control-scrollto=".scrollto">
                   <img src={arrow}/>

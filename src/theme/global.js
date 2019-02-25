@@ -22,6 +22,12 @@ const GlobalStyle = createGlobalStyle`
   #main {
     top: 8rem;
   }
+  header h1 {
+    font-size: 5em;
+  }
+  .inner {
+    margin-bottom: 10em !important;
+  }
   .inner, .major {
     margin:auto;
   }
@@ -48,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
   }
   .Collapsible:hover{
     color: ${ props => props.theme.color.pink };
+    cursor: pointer;
     border-top: 2px solid ${ props => props.theme.color.pink };
   }
   .Collapsible:hover + div {
@@ -93,9 +100,6 @@ const GlobalStyle = createGlobalStyle`
   }
   .team a:nth-of-type(3n), .team div a:nth-of-type(1), .team div a:nth-of-type(4n) {
     top: 8em;
-  }
-  .team {
-    margin-bottom: 20em;
   }
   .team a {
     background-color: ${ props => props.theme.color.blue };

@@ -2,6 +2,9 @@
 name: 'Kollan House'
 title: 'Operations'
 image: 'kollan-house'
+linkedin: 'https://www.linkedin.com/in/kollan/'
+angelco: 'https://angel.co/kollan-house'
+github: 'https://github.com/R-K-H'
 ---
 ![Kollan House](../../images/kollan-house.jpg)
 

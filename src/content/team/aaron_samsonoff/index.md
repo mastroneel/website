@@ -1,11 +1,12 @@
 ---
 name: "Aaron Samsonoff"
-title: 'General Partner, Co-Founder'
+title: "General Partner, Co-Founder"
+image: aaron_samsonoff.jpg
 ---
 
 ## Story
 
-Aaron didn’t have a paper route when he was a boy. He had several. And he was using the $2,000 he earned monthly to fund his entrepreneurial endeavours. The discipline of getting up at 4:30 in the morning to deliver newspapers turned into a lifelong habit of rising early. Thinking about Big Hairy Audacious Goals while he walked from door to door in the pre-dawn was just one inspiration for taking post-secondary courses in computer science and business.
+Aaron didn’t have a paper route when he was a boy. He had several. And he was using the \$2,000 he earned monthly to fund his entrepreneurial endeavours. The discipline of getting up at 4:30 in the morning to deliver newspapers turned into a lifelong habit of rising early. Thinking about Big Hairy Audacious Goals while he walked from door to door in the pre-dawn was just one inspiration for taking post-secondary courses in computer science and business.
 
 In his twenties, Aaron began to launch online businesses, and he learned to smile at failures. There were many. But the smiles came because he knew that he was gaining knowledge from each failed effort that would help him to move along the path to success. In 2004, he applied all those knowledges into building his first successful digital marketing company, Samsonoff Media, which after several buyouts and mergers morphed into Qool Media. After that, successes began to overtake failures as he established more e-commerce and digital marketing initiatives.
 

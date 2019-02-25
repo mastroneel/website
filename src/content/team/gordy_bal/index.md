@@ -1,6 +1,7 @@
 ---
 name: "Gordy Bal"
-title: 'General Partner, Co-Founder'
+title: "General Partner, Co-Founder"
+image: gordy_bal.jpg
 ---
 
 ## Story

@@ -1,12 +1,11 @@
 ---
-name: 'Kollan House'
-title: 'Operations'
-image: 'kollan-house'
-linkedin: 'https://www.linkedin.com/in/kollan/'
-angelco: 'https://angel.co/kollan-house'
-github: 'https://github.com/R-K-H'
+name: "Kollan House"
+title: "Operations"
+image: kollan_house.jpg
+linkedin: "https://www.linkedin.com/in/kollan/"
+angelco: "https://angel.co/kollan-house"
+github: "https://github.com/R-K-H"
 ---
-![Kollan House](../../images/kollan-house.jpg)
 
 ## Story
 

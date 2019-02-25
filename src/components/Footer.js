@@ -22,6 +22,19 @@ const FooterCell = styled.div`
     text-transform: initial;
     letter-spacing: 1.5px;
   }
+  h5 {
+    margin-bottom:0.5em;
+  }
+  a {
+    color: #FFF;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    transition: color .2s ease-in-out,border-bottom-color .2s ease-in-out;
+  }
+  a:hover {
+    border-bottom-color: transparent;
+    color: ${ props => props.theme.color.pink };
+  }
 `
 
 const Footer = () => (

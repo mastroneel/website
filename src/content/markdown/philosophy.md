@@ -3,6 +3,8 @@ title: 'Philosophy'
 date: '2017-11-07'
 intro: '
 The way our minds work, what we’re currently thinking about, exploring and our continued revelations.'
+subtitle: 'Our Approach'
+imageSource: 'team'
 ---
 ## History
 

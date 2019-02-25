@@ -1,7 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+
+import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
 import arrow from '../images/arrow.svg'
+import PageIntro from '../components/PageIntro'
 
 export default ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
@@ -10,26 +13,19 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={frontmatter.title} />
-      <div
-        id="main"
-        className="alt"
-      >
-        <section id="one">
-          <div className="inner">
-            <header className="major">
-              <h1>{frontmatter.title}</h1>
-              <h2>{frontmatter.intro}</h2>
-              <div className="arrow-icon-wrapper">
-                <a class="arrow-icon" href="" data-control-scrollto=".scrollto">
-                  <img src={arrow}/>
-                </a>
-              </div>
-            </header>
-            <span className="image main" />
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
-        </section>
-      </div>
+      {console.log(frontmatter.image)}
+      <PageIntro
+        small={frontmatter.subtitle}
+        heading={frontmatter.title}
+        paragraph={frontmatter.intro}
+        image={{
+          src: 'static/team-c1f9ff52629c475b6dc5196b5265034f.svg',
+          alt: 'Image',
+        }}
+      />
+      <Container className="inner">
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </Container>
     </>
   )
 }
@@ -42,6 +38,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         intro
+        subtitle
+        imageSource
       }
     }
   }

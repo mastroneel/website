@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Image from 'gatsby-image'
 
+import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
 import arrow from '../images/arrow.svg'
 
@@ -10,21 +12,14 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={frontmatter.title} />
-      <div
-        id="main"
-        className="alt"
-      >
-        <section id="one">
-          <div className="inner">
-            <header className="individual">
-              <h1>{frontmatter.name}</h1>
-              <h2>{frontmatter.title}</h2>
-            </header>
-            <span className="image main" />
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
-        </section>
-      </div>
+      <Container className="inner">
+        <small>{frontmatter.title}</small>
+        <h4>{frontmatter.name}</h4>
+        <span className="image main">
+          {frontmatter.image && <Image fluid={frontmatter.image.childImageSharp.fluid} />}
+        </span>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </Container>
     </>
   )
 }

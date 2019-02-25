@@ -94,6 +94,40 @@ const Index = ({ data }) => (
           </Welcome>
         </Column>
       </Row>
+      <Row>
+        <Column>
+          <Link
+            activeClassName="active"
+            to="/philosophy"
+          >
+            Philosophy
+          </Link>
+          <Link
+            activeClassName="active"
+            to="/team"
+          >
+            Team
+          </Link>
+          <Link
+            activeClassName="active"
+            to="/companies"
+          >
+            Companies
+          </Link>
+          <Link
+            activeClassName="active"
+            to="/faq"
+          >
+            FAQ
+          </Link>
+          <Link
+            activeClassName="active"
+            to="/news"
+          >
+            News
+          </Link>
+        </Column>
+      </Row>
     </Container>
   </>
 )

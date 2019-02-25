@@ -63,7 +63,7 @@ PageIntro.propTypes = {
   small: PropTypes.string,
   heading: PropTypes.string.isRequired,
   paragraph: PropTypes.string,
-  iamge: PropTypes.shape({
+  image: PropTypes.shape({
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }),

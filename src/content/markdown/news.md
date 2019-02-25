@@ -3,6 +3,8 @@ title: 'News'
 date: '2019-02-11'
 intro: '
 Our latest and greatest'
+subtitle: 'Blog'
+imageSource: 'team'
 ---
 
 ## Blog 1

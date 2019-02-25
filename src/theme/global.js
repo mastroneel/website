@@ -91,6 +91,12 @@ const GlobalStyle = createGlobalStyle`
     border-bottom-color: transparent;
     color: ${ props => props.theme.color.pink };
   }
+  .team a:nth-of-type(3n), .team div a:nth-of-type(1), .team div a:nth-of-type(4n) {
+    top: 8em;
+  }
+  .team {
+    margin-bottom: 20em;
+  }
   .team a {
     background-color: ${ props => props.theme.color.blue };
     background: linear-gradient(
@@ -105,6 +111,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 4em;
     position: relative;
     box-shadow: 0 0 0 5px #fff;
+    width: 33%;
+    display:inline-block;
+    min-height: 20em;
 
     strong {
       font-weight: 700;

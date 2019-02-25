@@ -1,6 +1,7 @@
 ---
 name: "Nichol Bradford"
 title: 'Strategic Operations'
+image: nichol_bradford.jpg
 ---
 
 ## Story

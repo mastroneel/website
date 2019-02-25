@@ -1,6 +1,7 @@
 ---
 name: "Brad Williams"
 title: 'Chief Financial Officer'
+image: brad_williams.jpg
 ---
 
 ## Story

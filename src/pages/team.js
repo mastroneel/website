@@ -55,7 +55,9 @@ export const allTeamQuery = graphql`
             slug
           }
           frontmatter {
+            name
             title
+            image
           }
         }
       }

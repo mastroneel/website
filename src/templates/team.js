@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+
 import SEO from '../components/seo'
 import arrow from '../images/arrow.svg'
 
@@ -13,13 +14,11 @@ export default ({ data }) => {
         id="main"
         className="alt"
       >
-        {console.log(data)}
         <section id="one">
           <div className="inner">
             <header className="individual">
               <h1>{frontmatter.name}</h1>
               <h2>{frontmatter.title}</h2>
-              <small>{frontmatter.image}</small>
             </header>
             <span className="image main" />
             <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -37,7 +36,16 @@ export const teamQuery = graphql`
       frontmatter {
         name
         title
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 740, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        linkedin
+        angelco
+        github
       }
     }
   }

@@ -1,6 +1,24 @@
-import { createGlobalStyle } from 'styled-components'
+import { css, createGlobalStyle } from 'styled-components'
 import { rgba, lighten, linearGradient } from 'polished'
 import 'normalize.css'
+
+import theme from './index'
+
+function setHeadingSize () {
+  let headings = ''
+  const sizes = theme.text.headingSizes
+
+  for (let i = 1; i <= 6; i++) {
+    headings += `
+      h${ i } {
+        font-size: ${ sizes[i - 1] };
+      }
+    `
+  }
+  return css`
+    ${ headings }
+  `
+}
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -19,12 +37,14 @@ const GlobalStyle = createGlobalStyle`
     margin-top: ${ props => props.theme.header.height };
     line-height: 1.745;
   }
-  #main {
-    top: 8rem;
+
+  ${ setHeadingSize() }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
-  header h1 {
-    font-size: 5em;
-  }
+
   .inner {
     margin-bottom: 10em !important;
   }

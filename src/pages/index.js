@@ -1,31 +1,35 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+import Image from 'gatsby-image'
+
 import styled from 'styled-components'
-import { rgba, lighten, linearGradient } from 'polished'
+import { rgba, lighten } from 'polished'
 
 import { Container, Row, Column } from '../components/ui/Grid'
-import Image from '../components/image'
 import SEO from '../components/seo'
 import Heading from '../components/ui/Heading'
 import Button from '../components/ui/Buttons'
 
-import office from '../images/office.jpg'
-
 const Welcome = styled.div`
   background-color: ${ props => props.theme.color.blue };
   background: linear-gradient(
-      ${ props => rgba(props.theme.color.blue, 0.93) },
-      ${ props => rgba(props.theme.color.blue, 0.97) }
-    ),
-    url(${ office });
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    ${ props => rgba(props.theme.color.blue, 0.93) },
+    ${ props => rgba(props.theme.color.blue, 0.97) }
+  );
   color: #fff;
   margin-top: 8em;
   padding: 4em;
   position: relative;
   box-shadow: 0 0 0 5px #fff;
+
+  .gatsby-image-wrapper {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 
   strong {
     font-weight: 700;
@@ -51,7 +55,7 @@ const Welcome = styled.div`
   }
 `
 
-const Index = () => (
+const Index = ({ data }) => (
   <>
     <SEO
       title="Home"
@@ -78,6 +82,7 @@ const Index = () => (
             >
               Our Philosophy
             </Button>
+            <Image fluid={data.image.childImageSharp.fluid} />
           </Welcome>
         </Column>
       </Row>
@@ -85,4 +90,15 @@ const Index = () => (
   </>
 )
 
+export const ImageQuery = graphql`
+  query {
+    image: file(relativePath: { eq: "office.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1348) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 export default Index

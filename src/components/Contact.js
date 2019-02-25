@@ -18,7 +18,7 @@ const Contact = () => (
         <Column>
           <Heading
             small="Contact Us"
-            level="h3"
+            level="h6"
           >
             Don't be a stranger
           </Heading>

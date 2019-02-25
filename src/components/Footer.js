@@ -35,23 +35,43 @@ const Footer = () => (
           <Row dir="column">
             <Column>
               <FooterCell>
-                <Heading level="h3">Email</Heading>
+                <Heading
+                  appearance="light"
+                  level="h5"
+                >
+                  Email
+                </Heading>
                 <a href="#">fund@ctr.capital</a>
               </FooterCell>
             </Column>
             <Column>
               <FooterCell>
-                <Heading level="h3">Phone</Heading>
-                <span>+1 778 785 6800 (Canada)</span><br />
+                <Heading
+                  appearance="light"
+                  level="h5"
+                >
+                  Phone
+                </Heading>
+                <span>+1 778 785 6800 (Canada)</span>
+                <br />
                 <span>+1 909 345 6800 (United States)</span>
               </FooterCell>
             </Column>
             <Column>
               <FooterCell>
-                <Heading level="h3">Address</Heading>
-                <span>612 View Street 6th Floor<br />
-                        Victoria, BC V8W 1J5<br />
-                        Canada</span>
+                <Heading
+                  appearance="light"
+                  level="h5"
+                >
+                  Address
+                </Heading>
+                <span>
+                  612 View Street 6th Floor
+                  <br />
+                  Victoria, BC V8W 1J5
+                  <br />
+                  Canada
+                </span>
               </FooterCell>
             </Column>
           </Row>

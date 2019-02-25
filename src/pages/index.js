@@ -31,6 +31,9 @@ const Welcome = styled.div`
     z-index: -1;
   }
 
+  h1 {
+    font-size: 4.2rem;
+  }
   strong {
     font-weight: 700;
     color: ${ props => props.theme.color.pink };
@@ -65,7 +68,12 @@ const Index = ({ data }) => (
       <Row>
         <Column>
           <Welcome>
-            <Heading small="about">Conscious Capital</Heading>
+            <Heading
+              appearance="light"
+              small="about"
+            >
+              Conscious Capital
+            </Heading>
             <p>
               Financial capital that is raised, built, managed, and deployed strategically, for the purpose of raising
               {` `}

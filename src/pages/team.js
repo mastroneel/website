@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
-import styled, { keyframes } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { rgba } from 'polished'
 
 import { Container, Row, Column } from '../components/ui/Grid'
@@ -29,6 +29,7 @@ const CardRow = styled(Row)`
     font-weight: 900;
     margin: 0;
     line-height: 1.2;
+    transition: text-shadow 0.25s ease;
   }
 
   h5 {
@@ -46,10 +47,14 @@ const CardRow = styled(Row)`
     display: inline-block;
     margin-top: 2em;
     transition: all 0.15s ease;
+    border-bottom: 1px solid ${ props => props.theme.color.gray };
+    position: relative;
 
     ::after {
       content: '⟶';
-      transform: translateX(0.5em);
+      position: absolute;
+      right: 0;
+      transform: translateX(2em);
       display: inline-block;
       transition: transform 0.3s ease;
     }
@@ -60,14 +65,43 @@ const CardRow = styled(Row)`
     transition: all 0.15s ease;
 
     :hover {
+      h2 {
+        text-shadow: 0 7px 20px ${ props => rgba(props.theme.color.pink, 0.4) };
+      }
+
       span {
         color: ${ props => props.theme.color.pink };
+        border-color: transparent;
 
         ::after {
-          transform: translateX(1.5em);
+          transform: translateX(3em);
         }
       }
     }
+  }
+`
+
+const Dots = css`
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: radial-gradient(${ props => props.theme.color.pink } 25%, transparent 25%);
+    background-size: 20px 20px;
+    width: 140px;
+    height: 140px;
+  }
+
+  &::before {
+    bottom: -60px;
+    left: -60px;
+  }
+
+  &::after {
+    top: -60px;
+    right: -60px;
   }
 `
 
@@ -101,6 +135,7 @@ export default ({ data }) => {
           return (
             <CardRow
               grid={1 / 2}
+              align="center"
               key={member.node.id}
             >
               <Title align="flex-end">
@@ -110,7 +145,7 @@ export default ({ data }) => {
                   <span>View Story</span>
                 </Link>
               </Title>
-              <Column>{image && <Image fluid={image.childImageSharp.fluid} />}</Column>
+              <Column css={Dots}>{image && <Image fluid={image.childImageSharp.fluid} />}</Column>
             </CardRow>
           )
         })}

@@ -11,7 +11,7 @@ export default ({ data }) => {
   const { frontmatter, html } = markdownRemark
   return (
     <>
-      <SEO title={frontmatter.title} />
+      <SEO title={frontmatter.name} />
       <Container className="inner">
         <small>{frontmatter.title}</small>
         <h4>{frontmatter.name}</h4>

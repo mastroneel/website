@@ -24,7 +24,7 @@ export default ({ data }) => {
           alt: 'The Answers You Want to Know',
         }}
       />
-      <Container className="inner">
+      <Container size="md">
         {faq.map(entry => (
           <div key={entry.node.id}>
             <h2>{entry.node.section}</h2>

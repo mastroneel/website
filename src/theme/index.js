@@ -11,7 +11,7 @@ export default {
     background: '#FFF',
   },
   text: {
-    headingSizes: ['6.4rem', '5.4rem', '4.2rem', '3.1rem', '2.6rem', '1.9rem'],
+    headingSizes: ['4.8rem', '4rem', '3.2rem', '2.4rem', '1.8rem', '1.4rem'],
     baseSize: '1.8rem',
     fontFamily: 'Muli, sans-serif',
   },

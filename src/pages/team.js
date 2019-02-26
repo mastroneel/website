@@ -29,10 +29,11 @@ const CardRow = styled(Row)`
     font-weight: 900;
     margin: 0;
     line-height: 1.2;
+    font-size: 4.8rem;
     transition: text-shadow 0.25s ease;
   }
 
-  h5 {
+  h4 {
     color: ${ props => props.theme.color.dark };
     font-weight: 900;
     margin: 0;
@@ -122,7 +123,7 @@ const Dots = css`
 
 const Title = styled(Column)`
   padding-top: 3em;
-  transform: translateX(15%);
+  transform: translateX(2.5em);
   z-index: 500;
 `
 
@@ -143,7 +144,7 @@ export default ({ data }) => {
           alt: 'Team Illustration',
         }}
       />
-      <Container size="lg">
+      <Container>
         {team.map(member => {
           const { image, name, title } = member.node.frontmatter
           const { slug } = member.node.fields
@@ -156,7 +157,7 @@ export default ({ data }) => {
               <Title align="flex-end">
                 <Link to={slug}>
                   <h2>{name}</h2>
-                  <h5>{title}</h5>
+                  <h4>{title}</h4>
                   <span>View Story</span>
                 </Link>
               </Title>

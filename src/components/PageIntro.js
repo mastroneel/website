@@ -14,7 +14,7 @@ const Spacing = css`
 const TextBody = styled.div`
   max-width: 75%;
 
-  h4 {
+  h3 {
     margin: 0;
     padding-top: 0.2em;
     line-height: 1.2;
@@ -88,7 +88,7 @@ const PageIntro = ({ small, heading, paragraph, image }) => (
         <TextBody>
           <Heading
             small={small}
-            level="h4"
+            level="h3"
           >
             {heading}
           </Heading>

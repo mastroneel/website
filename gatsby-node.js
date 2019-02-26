@@ -22,13 +22,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   const pageTemplate = path.resolve(`src/templates/page.js`)
   const teamTemplate = path.resolve(`src/templates/team.js`)
 
-  return graphql(`
+  await graphql(`
     {
       pages: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }

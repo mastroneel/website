@@ -4,7 +4,8 @@ import styled, { css } from 'styled-components'
 import theme from '../../theme'
 
 const Container = styled.div`
-  width: ${ props => (props.size === 'fluid' ? '100%' : props.size || props.theme.breakpoints.xl) };
+  width: ${ props =>
+    props.size === 'fluid' ? '100%' : props.theme.breakpoints[props.size] || props.theme.breakpoints.xl };
   margin: 0 auto;
 `
 

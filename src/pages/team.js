@@ -47,10 +47,21 @@ const CardRow = styled(Row)`
     display: inline-block;
     margin-top: 2em;
     transition: all 0.15s ease;
-    border-bottom: 1px solid ${ props => props.theme.color.gray };
     position: relative;
 
-    ::after {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      height: 1px;
+      width: 100%;
+      background-color: ${ props => props.theme.color.dark };
+      transition: transform 0.3s ease;
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    &::after {
       content: '⟶';
       position: absolute;
       right: 0;
@@ -71,9 +82,13 @@ const CardRow = styled(Row)`
 
       span {
         color: ${ props => props.theme.color.pink };
-        border-color: transparent;
 
-        ::after {
+        &::before {
+          background-color: ${ props => props.theme.color.pink };
+          transform: scaleX(0);
+        }
+
+        &::after {
           transform: translateX(3em);
         }
       }
@@ -128,7 +143,7 @@ export default ({ data }) => {
           alt: 'Team Illustration',
         }}
       />
-      <Container>
+      <Container size="lg">
         {team.map(member => {
           const { image, name, title } = member.node.frontmatter
           const { slug } = member.node.fields
@@ -171,7 +186,7 @@ export const allTeamQuery = graphql`
             title
             image {
               childImageSharp {
-                fluid(maxWidth: 740, quality: 100) {
+                fluid(maxWidth: 570, quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

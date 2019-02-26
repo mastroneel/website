@@ -8,9 +8,6 @@ import Contact from '../components/Contact'
 
 const FooterStyle = styled.footer`
   background-color: ${ props => props.theme.color.dark };
-  /* padding-top: 4em;
-  padding-bottom: 4em; */
-  margin-top: 2em;
 `
 
 const FooterCell = styled.div`
@@ -23,13 +20,13 @@ const FooterCell = styled.div`
     letter-spacing: 1.5px;
   }
   h5 {
-    margin-bottom:0.5em;
+    margin-bottom: 0.5em;
   }
   a {
-    color: #FFF;
+    color: #fff;
     border-bottom: 1px dotted;
     text-decoration: none;
-    transition: color .2s ease-in-out,border-bottom-color .2s ease-in-out;
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   }
   a:hover {
     border-bottom-color: transparent;

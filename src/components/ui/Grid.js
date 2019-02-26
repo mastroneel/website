@@ -3,6 +3,11 @@ import styled, { css } from 'styled-components'
 
 import theme from '../../theme'
 
+const Wrapper = styled.div`
+  background-color: ${ props => props.bgColor };
+  padding: 2em 0;
+`
+
 const Container = styled.div`
   width: ${ props =>
     props.size === 'fluid' ? '100%' : props.theme.breakpoints[props.size] || props.theme.breakpoints.xl };
@@ -50,4 +55,8 @@ Column.propTypes = {
   justify: PropTypes.oneOf(['flex-start', 'center', 'flex-end']),
 }
 
-export { Container, Row, Column }
+Wrapper.propTypes = {
+  bgColor: PropTypes.string.isRequired,
+}
+
+export { Container, Row, Column, Wrapper }

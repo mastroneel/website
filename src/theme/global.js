@@ -45,40 +45,6 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
-  .inner {
-    margin-bottom: 10em !important;
-  }
-
-  .Collapsible {
-    border-top: 2px solid ${ props => props.theme.color.dark };
-    padding:10px 0;
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-
-  .Collapsible:hover{
-    color: ${ props => props.theme.color.pink };
-    cursor: pointer;
-    border-top: 2px solid ${ props => props.theme.color.pink };
-  }
-
-  .Collapsible:hover + div {
-    border-top: 2px solid ${ props => props.theme.color.pink };
-  }
-
-  .is-open {
-    font-weight:bolder;
-    color: ${ props => props.theme.color.dark };
-  }
-
-  .Collapsible__contentOuter {
-    color: ${ props => props.theme.color.dark };
-  }
-
-  .faq:last-child {
-    border-bottom: 2px solid ${ props => props.theme.color.dark };
-  }
-  
   .arrow-icon-wrapper {
     position: absolute;
     text-align: center;

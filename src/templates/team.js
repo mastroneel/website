@@ -12,7 +12,7 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={frontmatter.name} />
-      <Container className="inner">
+      <Container>
         <small>{frontmatter.title}</small>
         <h4>{frontmatter.name}</h4>
         <span className="image main">

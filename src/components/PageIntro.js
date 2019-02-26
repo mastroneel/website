@@ -28,7 +28,7 @@ const TextBody = styled.div`
 `
 
 const ImageBody = styled.div`
-  height: 100%;
+  max-height: 40vh;
 
   img {
     width: 640px;
@@ -80,7 +80,10 @@ const Scroll = styled.div`
 
 const PageIntro = ({ small, heading, paragraph, image }) => (
   <Container css={Spacing}>
-    <Row grid={1 / 2}>
+    <Row
+      grid={1 / 2}
+      align="center"
+    >
       <Column>
         <TextBody>
           <Heading

@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
-import arrow from '../images/arrow.svg'
+import faqIllustration from '../images/faq.svg'
 import PageIntro from '../components/PageIntro'
 
 export default ({ data }) => {
@@ -20,8 +20,8 @@ export default ({ data }) => {
         heading="The Answers You Want to Know"
         paragraph="These are some of the most frequent questions asked of us and our responses"
         image={{
-          src: 'static/team-c1f9ff52629c475b6dc5196b5265034f.svg',
-          alt: 'Image',
+          src: faqIllustration,
+          alt: 'The Answers You Want to Know',
         }}
       />
       <Container className="inner">
@@ -29,7 +29,10 @@ export default ({ data }) => {
           <div key={entry.node.id}>
             <h2>{entry.node.section}</h2>
             {entry.node.faq.map((qa, idx) => (
-              <div key={idx} className="faq">
+              <div
+                key={idx}
+                className="faq"
+              >
                 <Collapsible trigger={qa.q}>
                   <p>{qa.a}</p>
                 </Collapsible>

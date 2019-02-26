@@ -19,6 +19,7 @@ const Contact = () => (
           <Heading
             small="Contact Us"
             level="h6"
+            appearance="light"
           >
             Don't be a stranger
           </Heading>

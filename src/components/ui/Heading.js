@@ -5,7 +5,8 @@ import styled from 'styled-components'
 const Small = styled.small`
   text-transform: uppercase;
   color: ${ props => props.theme.color.pink };
-  letter-spacing: 0.4px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
 `
 
 const Header = styled.h1`

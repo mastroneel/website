@@ -10,6 +10,7 @@ import faqIllustration from '../images/faq.svg'
 import PageIntro from '../components/PageIntro'
 
 const SectionTitle = styled.h3`
+  font-weight: 900;
   position: relative;
   display: inline-block;
 

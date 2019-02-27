@@ -2,9 +2,11 @@
 name: "Kollan House"
 title: "Operations"
 image: kollan_house.jpg
-linkedin: "https://www.linkedin.com/in/kollan/"
-angelco: "https://angel.co/kollan-house"
-github: "https://github.com/R-K-H"
+avatar: avatar.jpg
+social:
+  - linkedin: "https://www.linkedin.com/in/kollan/"
+  - angelco: "https://angel.co/kollan-house"
+  - github: "https://github.com/R-K-H"
 ---
 
 ## Story

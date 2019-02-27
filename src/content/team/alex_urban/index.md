@@ -2,6 +2,11 @@
 name: "Alex Urban"
 title: "Chief Research Officer"
 image: alex_urban.jpg
+avatar: avatar.jpg
+social:
+  - linkedin: ""
+  - angelco: ""
+  - github: ""
 ---
 
 ## Story

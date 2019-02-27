@@ -1,7 +1,12 @@
 ---
 name: "Aaron Samsonoff"
 title: "General Partner, Co-Founder"
+avatar: avatar.jpg
 image: aaron_samsonoff.jpg
+social:
+  - linkedin: ""
+  - angelco: ""
+  - github: ""
 ---
 
 ## Story

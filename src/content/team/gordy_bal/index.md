@@ -2,6 +2,11 @@
 name: "Gordy Bal"
 title: "General Partner, Co-Founder"
 image: gordy_bal.jpg
+avatar: avatar.jpg
+social:
+  - linkedin: ""
+  - angelco: ""
+  - github: ""
 ---
 
 ## Story

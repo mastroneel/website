@@ -2,6 +2,7 @@
 name: "Aaron Samsonoff"
 title: "General Partner, Co-Founder"
 image: aaron_samsonoff.jpg
+linkedin: 'https://www.linkedin.com/in/aaron-samsonoff-65aa52113/'
 ---
 
 ## Story

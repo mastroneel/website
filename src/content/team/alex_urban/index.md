@@ -2,6 +2,7 @@
 name: "Alex Urban"
 title: "Chief Research Officer"
 image: alex_urban.jpg
+linkedin: 'https://www.linkedin.com/in/alexrurban/'
 ---
 
 ## Story

@@ -2,6 +2,9 @@
 name: "Nichol Bradford"
 title: 'Strategic Operations'
 image: nichol_bradford.jpg
+linkedin: 'https://www.linkedin.com/in/nicholbradford/'
+website: 'https://nicholbradford.com/'
+twitter: 'https://twitter.com/nichol_bradford'
 ---
 
 ## Story

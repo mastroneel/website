@@ -23,7 +23,10 @@ export default ({ data }) => {
           alt: 'Image',
         }}
       />
-      <Container size="md">
+      <Container
+        className="content-styled"
+        size="md"
+      >
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
     </>

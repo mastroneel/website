@@ -45,14 +45,21 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
-  .arrow-icon-wrapper {
-    position: absolute;
-    text-align: center;
-    bottom: 30px;
-    left: 50%;
-    padding: 0;
-    margin-left: -26px;
-    z-index: 90;
+  .content-styled {
+    h2 {
+      font-weight: 900;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        background-color: ${ props => props.theme.color.pink };
+        width: 30%;
+        height: 4px;
+    }
   }
 `
 

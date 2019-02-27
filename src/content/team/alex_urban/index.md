@@ -4,7 +4,7 @@ title: "Chief Research Officer"
 image: alex_urban.jpg
 avatar: avatar.jpg
 social:
-  - linkedin: ""
+  - linkedin: "https://www.linkedin.com/in/alexrurban/"
   - angelco: ""
   - github: ""
 ---

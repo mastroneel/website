@@ -4,9 +4,10 @@ title: "General Partner, Co-Founder"
 image: gordy_bal.jpg
 avatar: avatar.jpg
 social:
-  - linkedin: ""
+  - linkedin: "https://www.linkedin.com/in/gordy-bal-85079a137/"
   - angelco: ""
   - github: ""
+  - website: "https://gordybal.com/"
 ---
 
 ## Story

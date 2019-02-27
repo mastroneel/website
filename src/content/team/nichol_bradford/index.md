@@ -3,6 +3,12 @@ name: "Nichol Bradford"
 title: "Strategic Operations"
 image: nichol_bradford.jpg
 avatar: avatar.jpg
+social:
+  - linkedin: "https://www.linkedin.com/in/nicholbradford/"
+  - angelco: ""
+  - github: ""
+  - twitter: "https://twitter.com/nichol_bradford"
+  - website: "https://nicholbradford.com/"
 ---
 
 ## Story

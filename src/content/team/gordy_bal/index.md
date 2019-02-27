@@ -2,8 +2,12 @@
 name: "Gordy Bal"
 title: "General Partner, Co-Founder"
 image: gordy_bal.jpg
-linkedin: 'https://www.linkedin.com/in/gordy-bal-85079a137/'
-website: 'https://gordybal.com/'
+avatar: avatar.jpg
+social:
+  - linkedin: "https://www.linkedin.com/in/gordy-bal-85079a137/"
+  - angelco: ""
+  - github: ""
+  - website: "https://gordybal.com/"
 ---
 
 ## Story

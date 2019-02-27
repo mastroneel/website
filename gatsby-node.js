@@ -54,6 +54,22 @@ exports.createPages = async ({ actions, graphql }) => {
               slug
             }
           }
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              name
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              name
+            }
+          }
         }
       }
     }
@@ -70,11 +86,14 @@ exports.createPages = async ({ actions, graphql }) => {
       })
     })
 
-    result.data.team.edges.forEach(({ node }) => {
+    result.data.team.edges.forEach(({ node, next, previous }) => {
       createPage({
         path: node.fields.slug,
         component: teamTemplate,
-        context: {},
+        context: {
+          next: next,
+          prev: previous,
+        },
       })
     })
   })

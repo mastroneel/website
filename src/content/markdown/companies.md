@@ -10,7 +10,7 @@ imageSource: 'team'
 ## Investment Themes
 In our approach to a theme we consider the fund as industry agnostic, provided it fits within the funds thesis and vision. We do however focus on explosive growth sectors, a vector of an industry that is post fringe cycle and beginning its growth cycle stage, at its tipping point, contained within hardware- and software-based tools, leveraging advancements in AI, designed to enhance human psychological well-being, cognitive function and physical capabilities, known as Transformative Technology.
 
-- ### Disruptive Health
+### Disruptive Health
 **Definition**  
 Disruptive health can be defined as any innovations within the healthcare industry, utilizing the advent of AI, big data, other forms of technology, in efforts to either prolong and extend life, reduce symptoms and diseases, and seek to improve or otherwise augment the current capabilities of treatment and the capacity of the human brain and body. Biotech and longevity.  
 **Inspiration for including in the fund**  
@@ -24,7 +24,7 @@ Healthcare represents annually about 17.9% of the nations GDP, it is easy to see
 **Companies we’ve invested in**  
 Oura
 
-- #### Human Potential
+#### Human Potential
 **Definition**  
 The concept of cultivating extraordinary potential which lies largely untapped in all people. This can feature a wide range of products services and businesses focusing in on skill, talent, aptitude and ability. It’s a combination between the health component of the body as well as the psychological adaptation and unlocking of the ability to tap into the potential that exists, does not require medical professional and is a methodology or process which an individual can master.  
 **Inspiration for including in the fund**  
@@ -34,7 +34,7 @@ With the advent of furthering what an average human is capable of, brings into f
 **How it returns investment**  
 We’ve seen a rise in direct to consumer technologies, the transformative technology conference and academy and ancillary services which run parallel in many ways (regenerative medicine). This rise has lead to an increased investment of X% as well as the total number of successful companies by Y%.
 
-- ### Sustainable Civilization
+### Sustainable Civilization
 **Definition**  
 An opportunity that strives to develop technology which will create the opportunity for us to live in balance with our ecosystem and repair the previous damage.  
 **Inspiration for including in the fund**  
@@ -46,7 +46,7 @@ Solar City, Tesla, Malta, Makani, Dandelion, 4ocean, The Ocean Cleanup, Synova
 **Companies we’ve invested in**  
 Full Cycle Energy Fund
 
-- #### Climate Rehabilitation
+#### Climate Rehabilitation
 **Definition**  
 We define climate rehabilitation as the focus or act of restoring the environment, both oceans and land masses, to a symbiotic relationship with those that live within them. 
 **Inspiration for including in the fund**  
@@ -54,7 +54,7 @@ The way we interact with our environment and the potential for the future here i
 **How it impacts raising consciousness**  
 **How it returns investment**  
 
-- ### Financial Technology
+### Financial Technology
 **Definition**  
 Fintech has been previously defined as any computer program or technology used to support, enable, or disrupt the banking and financial services industries.  
 **Inspiration for including in the fund**  
@@ -68,7 +68,7 @@ Robinhood, Simple, Circle, Mint, Wealthsimple, Stripe, Robinhood, Square, Plaid,
 **Companies we’ve invested in**  
 Good Money, Investabit
 
-- #### Blockchain and Digital Assets
+#### Blockchain and Digital Assets
 **Definition**  
 While closely related to fintech we see this as another aspect to each persons lives. We see this as a potential for complete disruption in the financial space, but we will still require the innovations from the fintech sector to provide services leveraging this new foundation.  
 **Inspiration for including in the fund**  

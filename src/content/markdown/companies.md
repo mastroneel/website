@@ -4,7 +4,7 @@ date: '2019-02-11'
 intro: '
 The way we chose to invest.'
 subtitle: 'Where We Invest'
-imageSource: 'team'
+imageSource: 'companies'
 ---
 
 ## Investment Themes

@@ -44,7 +44,7 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
       team: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___title] }
+        sort: { order: ASC, fields: [frontmatter___order] }
         limit: 1000
         filter: { fileAbsolutePath: { regex: "/team/" } }
       ) {

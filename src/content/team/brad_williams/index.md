@@ -5,6 +5,7 @@ image: brad_williams.jpg
 avatar: avatar.jpg
 social:
   - linkedin: "https://www.linkedin.com/in/bradwilliamseas/"
+order: 3
 ---
 
 ## Story

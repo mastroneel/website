@@ -7,6 +7,7 @@ social:
   - linkedin: "https://www.linkedin.com/in/kollan/"
   - angelco: "https://angel.co/kollan-house"
   - github: "https://github.com/R-K-H"
+order: 5
 ---
 
 ## Story

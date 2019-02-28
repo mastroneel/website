@@ -174,7 +174,7 @@ export const allTeamQuery = graphql`
   query {
     team: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/team/" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {

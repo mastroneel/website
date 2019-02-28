@@ -7,6 +7,7 @@ social:
   - linkedin: "https://www.linkedin.com/in/aaron-samsonoff-65aa52113/"
   - angelco: ""
   - github: ""
+order: 1
 ---
 
 ## Story

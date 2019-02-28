@@ -8,6 +8,7 @@ social:
   - angelco: ""
   - github: ""
   - website: "https://gordybal.com/"
+order: 0
 ---
 
 ## Story

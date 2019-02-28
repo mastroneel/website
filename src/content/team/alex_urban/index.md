@@ -7,6 +7,7 @@ social:
   - linkedin: "https://www.linkedin.com/in/alexrurban/"
   - angelco: ""
   - github: ""
+order: 4
 ---
 
 ## Story

@@ -15,11 +15,12 @@ const TextBody = styled.div`
   max-width: 75%;
 
   h3 {
-    margin: 0;
-    padding-top: 0.2em;
     line-height: 1.2;
     text-transform: initial;
     letter-spacing: 0.5px;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 0.2em;
   }
 
   p {

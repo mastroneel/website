@@ -6,23 +6,12 @@ import Collapsible from 'react-collapsible'
 
 import { Container, Wrapper } from '../components/ui/Grid'
 import SEO from '../components/seo'
+import { Underline } from '../components/ui/Heading'
 import faqIllustration from '../images/faq.svg'
 import PageIntro from '../components/PageIntro'
 
 const SectionTitle = styled.h3`
-  font-weight: 900;
-  position: relative;
-  display: inline-block;
-
-  &::after {
-    content: '';
-    width: 30%;
-    height: 3px;
-    background-color: ${ props => props.theme.color.pink };
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-  }
+  ${ Underline }
 `
 
 const FaqBody = styled.div`

@@ -12,6 +12,7 @@ function setHeadingSize () {
     headings += `
       h${ i } {
         font-size: ${ sizes[i - 1] };
+        font-weight: 900;
       }
     `
   }

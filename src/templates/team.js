@@ -1,10 +1,11 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { rgba, lighten } from 'polished'
 
 import { Container, Row, Column } from '../components/ui/Grid'
+import Article from '../components/ui/Article'
 import SEO from '../components/seo'
 
 import angel from '../images/social/angellist.svg'
@@ -42,30 +43,6 @@ const BlownUp = styled.div`
   }
 
   img {
-  }
-`
-
-const Article = styled.article`
-  max-width: 980px;
-  padding: 0 4em;
-  margin: 0 auto;
-  background-color: #fff;
-  transform: translateY(-8em);
-
-  h2 {
-    font-weight: 900;
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      background-color: ${ props => props.theme.color.pink };
-      width: 30%;
-      height: 4px;
-    }
   }
 `
 
@@ -242,7 +219,11 @@ export default ({ data, pageContext }) => {
         style={{ position: 'relative' }}
       >
         <Ring />
-        <Article>
+        <Article
+          css={css`
+            transform: translateY(-8em);
+          `}
+        >
           <Avatar>{avatar && <Image fixed={avatar.childImageSharp.fixed} />}</Avatar>
           <Pagination grid={1 / 2}>
             <Prev align="flex-start">

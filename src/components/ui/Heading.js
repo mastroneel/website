@@ -1,6 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const Underline = css`
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: ${ props => props.theme.color.pink };
+    width: 30%;
+    height: 4px;
+  }
+`
 
 const Small = styled.small`
   text-transform: uppercase;
@@ -11,6 +27,7 @@ const Small = styled.small`
 
 const Header = styled.h1`
   text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: 3px;
   color: ${ props => (props.appearance === 'light' ? '#fff' : props.theme.color.dark) };
   margin-top: 0;
@@ -35,4 +52,4 @@ Heading.propTypes = {
   appearance: PropTypes.oneOf(['light', 'dark']),
 }
 
-export default Heading
+export { Heading as default, Underline }

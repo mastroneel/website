@@ -8,7 +8,7 @@ import Heading from './ui/Heading'
 import mouse from '../images/mouse.svg'
 
 const Spacing = css`
-  padding: 7em 0;
+  padding: 5em 0;
 `
 
 const TextBody = styled.div`
@@ -28,10 +28,9 @@ const TextBody = styled.div`
 `
 
 const ImageBody = styled.div`
-  max-height: 40vh;
+  height: 60vh;
 
   img {
-    width: 640px;
     height: 100%;
   }
 `

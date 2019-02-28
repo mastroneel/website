@@ -10,6 +10,8 @@ import SEO from '../components/seo'
 import angel from '../images/social/angellist.svg'
 import github from '../images/social/github.svg'
 import linkedin from '../images/social/linkedin.svg'
+import twitter from '../images/social/twitter.svg'
+import website from '../images/social/website.svg'
 import prev from '../images/chevron-left.svg'
 import next from '../images/chevron-right.svg'
 
@@ -22,6 +24,8 @@ const socialIcon = {
   angelco: angel,
   linkedin: linkedin,
   github: github,
+  twitter: twitter,
+  website: website,
 }
 
 const BlownUp = styled.div`
@@ -127,6 +131,7 @@ const SocialLink = styled.a`
     display: inline-block;
     background-image: url(${ props => socialIcon[props.icon] });
     background-repeat: no-repeat;
+    background-size: 20px 20px;
     width: 20px;
     height: 20px;
     margin-right: 4px;
@@ -309,6 +314,8 @@ export const teamQuery = graphql`
           linkedin
           angelco
           github
+          twitter
+          website
         }
       }
     }

@@ -6,7 +6,6 @@ import { rgba } from 'polished'
 
 import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
-import arrow from '../images/arrow.svg'
 import PageIntro from '../components/PageIntro'
 
 import teamIllustration from '../images/team.svg'

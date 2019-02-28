@@ -9,6 +9,7 @@ social:
   - github: ""
   - twitter: "https://twitter.com/nichol_bradford"
   - website: "https://nicholbradford.com/"
+order: 2
 ---
 
 ## Story

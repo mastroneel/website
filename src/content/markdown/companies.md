@@ -11,7 +11,6 @@ imageSource: 'companies'
 In our approach to a theme we consider the fund as industry agnostic, provided it fits within the funds thesis and vision. We do however focus on explosive growth sectors, a vector of an industry that is post fringe cycle and beginning its growth cycle stage, at its tipping point, contained within hardware- and software-based tools, leveraging advancements in AI, designed to enhance human psychological well-being, cognitive function and physical capabilities, known as Transformative Technology.
 
 ### Disruptive Health
-**Definition**  
 Disruptive health can be defined as any innovations within the healthcare industry, utilizing the advent of AI, big data, other forms of technology, in efforts to either prolong and extend life, reduce symptoms and diseases, and seek to improve or otherwise augment the current capabilities of treatment and the capacity of the human brain and body. Biotech and longevity.  
 **Inspiration for including in the fund**  
 While this is closely related to human potential, we see this a separate category all together. This is designed specifically around the health and well being of individuals leveraging the advances in Machine Learning and Artificial Intelligence. Genomic testing, bio-engineering, pharmaceuticals.  
@@ -25,7 +24,6 @@ Healthcare represents annually about 17.9% of the nations GDP, it is easy to see
 Oura
 
 #### Human Potential
-**Definition**  
 The concept of cultivating extraordinary potential which lies largely untapped in all people. This can feature a wide range of products services and businesses focusing in on skill, talent, aptitude and ability. It’s a combination between the health component of the body as well as the psychological adaptation and unlocking of the ability to tap into the potential that exists, does not require medical professional and is a methodology or process which an individual can master.  
 **Inspiration for including in the fund**  
 This has been included as a specific focus for the potentialities that such technology will assist in the raising of consciousness, the capabilities and possibilities of what an average human can perform or tap into. Leveraging technology to provide access, information and tools for the education of end users.  
@@ -35,7 +33,6 @@ With the advent of furthering what an average human is capable of, brings into f
 We’ve seen a rise in direct to consumer technologies, the transformative technology conference and academy and ancillary services which run parallel in many ways (regenerative medicine). This rise has lead to an increased investment of X% as well as the total number of successful companies by Y%.
 
 ### Sustainable Civilization
-**Definition**  
 An opportunity that strives to develop technology which will create the opportunity for us to live in balance with our ecosystem and repair the previous damage.  
 **Inspiration for including in the fund**  
 **How it impacts raising consciousness**  
@@ -47,7 +44,6 @@ Solar City, Tesla, Malta, Makani, Dandelion, 4ocean, The Ocean Cleanup, Synova
 Full Cycle Energy Fund
 
 #### Climate Rehabilitation
-**Definition**  
 We define climate rehabilitation as the focus or act of restoring the environment, both oceans and land masses, to a symbiotic relationship with those that live within them. 
 **Inspiration for including in the fund**  
 The way we interact with our environment and the potential for the future here is critical for humanity.  The impact cannot be overstated, and it is imperative to the funds mission vision to take climate rehabilitation as a industry focus for the portfolio. 
@@ -55,7 +51,6 @@ The way we interact with our environment and the potential for the future here i
 **How it returns investment**  
 
 ### Financial Technology
-**Definition**  
 Fintech has been previously defined as any computer program or technology used to support, enable, or disrupt the banking and financial services industries.  
 **Inspiration for including in the fund**  
 The fund is looking to capitalize on one sector and industry that has truly stood the test of time, and that is value exchange and value storage.  Fintech is quite simply the newest slice of an everlasting loaf of bread.  It seemingly touches nearly every citizen of earth, as almost all engage in some form of value exchange on a nearly daily or multiple daily basis.  While there are those that are currently unbanked or not involved in the traditional financial system as they are in areas that remain exempt from being included, many fintech companies are providing solutions to problems within and outside of traditional financial services, creating and supporting an inclusive web that seeks to push every economy into one massively open and shared global online financial economy.  
@@ -69,7 +64,6 @@ Robinhood, Simple, Circle, Mint, Wealthsimple, Stripe, Robinhood, Square, Plaid,
 Good Money, Investabit
 
 #### Blockchain and Digital Assets
-**Definition**  
 While closely related to fintech we see this as another aspect to each persons lives. We see this as a potential for complete disruption in the financial space, but we will still require the innovations from the fintech sector to provide services leveraging this new foundation.  
 **Inspiration for including in the fund**  
 **How it impacts raising consciousness**  

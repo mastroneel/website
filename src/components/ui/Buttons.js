@@ -65,8 +65,14 @@ const Button = styled.button`
   }
 `
 
+const ButtonGroup = styled.div`
+  ${ Button } {
+    margin-right: 1em;
+  }
+`
+
 Button.propTypes = {
   appearance: PropTypes.oneOf(['primary', 'secondary']).isRequired,
 }
 
-export default Button
+export { Button as default, ButtonGroup }

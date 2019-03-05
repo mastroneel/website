@@ -8,6 +8,7 @@ import { Wrapper, Container, Row, Column } from '../components/ui/Grid'
 import theme from '../theme'
 import Heading, { Underline } from '../components/ui/Heading'
 import Tabs from '../components/ui/Tabs'
+import Button, { ButtonGroup } from '../components/ui/Buttons'
 
 import companiesIll from '../images/companies.svg'
 import heart from '../images/companies/heart.svg'
@@ -88,11 +89,54 @@ export default () => (
           </Column>
         </Row>
         <Row>
-          <Tabs>
-            <div label="Gator">
-              See ya later, <em>Alligator</em>!
+          <Column>
+            <Tabs>
+              <div aria-label="Inclusion">
+                <p>
+                  This has been included as a specific focus for the potentialities that such technology will assist in
+                  the raising of consciousness, the capabilities and possibilities of what an average human can perform
+                  or tap into. Leveraging technology to provide access, information and tools for the education of end
+                  users.
+                </p>
+              </div>
+              <div aria-label="Impact">
+                <p>
+                  If people can live longer, healthier lives then many of the worries associated with a lower level
+                  thinking can be escaped and accelerate the growth of the individual personally.
+                </p>
+              </div>
+              <div aria-label="Returns">
+                <p>
+                  Healthcare represents annually about 17.9% of the nations GDP, it is easy to see that within the last
+                  decade this year over year rate has grown by roughly 3% per annum compounded, with a growing industry
+                  that is only going to grow larger year after year, it is likely that there are many components and
+                  specific sectors that are ripe for disruption. Discerning which sectors are ripe for disruption.
+                </p>
+              </div>
+              <div aria-label="Examples">
+                <p>
+                  25 Again, 23andme, Calico, Oura, Life Extension Project, Davinci Robot, Doc.ai, Innovation Labs, Dave
+                  Asprey, Whim Hoff, Flow Genome Project, Nootropics, Free Solo, Verily, Headspace
+                </p>
+              </div>
+            </Tabs>
+          </Column>
+        </Row>
+        <Row>
+          <Column>
+            <h4>Our Investments</h4>
+            <div>
+              <Button
+                as="a"
+                appearance="secondary"
+                href="https://www.ouraring.com"
+                target="_blank"
+                rel="nofollow"
+              >
+                Oura
+              </Button>
             </div>
-          </Tabs>
+          </Column>
         </Row>
       </Container>
     </Wrapper>

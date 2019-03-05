@@ -1,32 +1,32 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { rgba } from 'polished'
 
 import Tab from './Tab'
 
 const TabsStyle = styled.div`
   width: 100%;
+  display: flex;
+  border-top: 1px solid ${ props => rgba(props.theme.color.dark, 0.12) };
+  margin-top: 2em;
+  margin-bottom: 2em;
 `
 
 const TabMenu = styled.div`
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-  }
+  padding-top: 2.5em;
+  padding-right: 2.5em;
+  border-right: 1px solid ${ props => rgba(props.theme.color.dark, 0.12) };
 `
 
 const Content = styled.div`
   display: block;
-  margin-top: 3em;
+  padding-top: 2.5em;
+  padding-left: 2.5em;
+
+  p {
+    margin: 0;
+  }
 `
 
 class Tabs extends Component {
@@ -34,7 +34,7 @@ class Tabs extends Component {
     super(props)
 
     this.state = {
-      activeTab: null,
+      activeTab: '',
     }
   }
 
@@ -44,32 +44,30 @@ class Tabs extends Component {
 
   async componentDidMount () {
     await this.setState({
-      activeTab: this.props.children.props.label,
+      activeTab: this.props.children[0].props['aria-label'],
     })
   }
 
   render () {
     const { children } = this.props
     const { activeTab } = this.state
-
     return (
       <TabsStyle>
         <TabMenu>
           {children.map(child => {
-            console.log(child)
-            const { label } = child.props
-
-            return <Tab
-              activeTab={activeTab}
-              key={label}
-              label={label}
-              onClick={this.onTabClick}
-            />
+            return (
+              <Tab
+                activeTab={activeTab}
+                key={child.props['aria-label']}
+                label={child.props['aria-label']}
+                onClick={this.onTabClick}
+              />
+            )
           })}
         </TabMenu>
         <Content>
           {children.map(child => {
-            if (child.props.label !== activeTab) return null
+            if (child.props['aria-label'] !== activeTab) return null
             return child.props.children
           })}
         </Content>
@@ -77,15 +75,5 @@ class Tabs extends Component {
     )
   }
 }
-
-// Tabs.propTypes = {
-//   children: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       props: PropTypes.shape({
-//         label: PropTypes.string.isRequired,
-//       }),
-//     }).isRequired
-//   ).isRequired,
-// }
 
 export default Tabs

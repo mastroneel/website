@@ -1,3 +1,10 @@
+---
+title: "Philosophy"
+intro: "The way our minds work, what we’re currently thinking about, exploring and our continued revelations."
+subtitle: "Our Approach"
+imageSource: "philosophy"
+---
+
 ## Network Effect
 
 We are well-connected with a diverse network of investors who are open to opportunities at an earlier stage of development. As these connections and relationships grow, we believe that CCF will be seen as a leader in the Conscious Capital space.

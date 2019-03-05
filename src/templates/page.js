@@ -4,20 +4,23 @@ import { graphql } from 'gatsby'
 import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
 import PageIntro from '../components/PageIntro'
+import Article from '../components/ui/Article'
 
 import companies from '../images/companies.svg'
 import news from '../images/news.svg'
+import philosophy from '../images/philosophy.svg'
 
 export default ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const introImage = {
     companies: companies,
     news: news,
+    philosophy: philosophy,
   }
+
   return (
     <>
-    {console.log(typeof companies)}
       <SEO title={frontmatter.title} />
       <PageIntro
         small={frontmatter.subtitle}
@@ -25,11 +28,11 @@ export default ({ data }) => {
         paragraph={frontmatter.intro}
         image={{
           src: introImage[frontmatter.title.toLowerCase()],
-          alt: frontmatter.title + ' illustration',
+          alt: `${ frontmatter.title } illustration`,
         }}
       />
-      <Container size="md">
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Container>
+        <Article dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
     </>
   )

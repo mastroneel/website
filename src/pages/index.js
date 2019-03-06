@@ -7,8 +7,9 @@ import { rgba, lighten } from 'polished'
 
 import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
-import Heading from '../components/ui/Heading'
+import Heading, { Underline } from '../components/ui/Heading'
 import Button from '../components/ui/Buttons'
+import theme from '../theme'
 
 const Welcome = styled.div`
   background-color: ${ props => props.theme.color.blue };
@@ -17,7 +18,6 @@ const Welcome = styled.div`
     ${ props => rgba(props.theme.color.blue, 0.97) }
   );
   color: #fff;
-  margin-top: 8em;
   padding: 4em;
   position: relative;
   box-shadow: 0 0 0 5px #fff;
@@ -58,13 +58,57 @@ const Welcome = styled.div`
   }
 `
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 2fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+`
+
+const GridItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
+`
+
+const LinkBlock = styled.div`
+  padding: 1.5em 2em;
+  background-color: ${ props => props.bgColor };
+  color: ${ props => props.theme.color.dark };
+  text-decoration: none;
+  font-weight: 700;
+
+  h4 {
+    ${ Underline }
+    margin: 0;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0.8em 0;
+  }
+`
+
 const Index = ({ data }) => (
   <>
     <SEO
       title="Home"
       keywords={[`gatsby`, `application`, `react`]}
     />
-    <Container>
+    <Container
+      css={`
+        margin-top: ${ props => props.theme.spacing.xl };
+        margin-bottom: ${ props => props.theme.spacing.lg };
+      `}
+    >
       <Row>
         <Column>
           <Welcome>
@@ -90,54 +134,138 @@ const Index = ({ data }) => (
             >
               Our Philosophy
             </Button>
-            <Image fluid={data.image.childImageSharp.fluid} />
+            <Image fluid={data.hero.childImageSharp.fluid} />
           </Welcome>
         </Column>
       </Row>
-      <Row>
-        <Column>
-          <Link
-            activeClassName="active"
+    </Container>
+    <Container
+      css={`
+        margin-bottom: ${ props => props.theme.spacing.lg };
+      `}
+    >
+      <Grid>
+        <GridItem>
+          {data.images.edges
+            .filter(image => image.node.name === 'scenery')
+            .map((image, idx) => (
+              <Image
+                key={idx}
+                fluid={image.node.childImageSharp.fluid}
+              />
+            ))}
+        </GridItem>
+        <GridItem>
+          <LinkBlock
+            as={Link}
+            bgColor={theme.color.pink}
             to="/philosophy"
           >
-            Philosophy
-          </Link>
-          <Link
-            activeClassName="active"
+            <h4>Philosophy</h4>
+            <p>The way our minds work, what we’re currently thinking about, exploring and our continued revelations</p>
+          </LinkBlock>
+        </GridItem>
+        <GridItem>
+          <LinkBlock
+            as={Link}
+            bgColor={theme.color.yellow}
             to="/team"
           >
-            Team
-          </Link>
-          <Link
-            activeClassName="active"
-            to="/companies"
+            <h4>Our Team</h4>
+            <p>With decades of experience in the world of startups and private placements</p>
+          </LinkBlock>
+        </GridItem>
+        <GridItem>
+          {data.images.edges
+            .filter(image => image.node.name === 'office-people')
+            .map((image, idx) => (
+              <Image
+                key={idx}
+                fluid={image.node.childImageSharp.fluid}
+              />
+            ))}
+        </GridItem>
+        <GridItem>
+          {data.images.edges
+            .filter(image => image.node.name === 'office-boss')
+            .map((image, idx) => (
+              <Image
+                key={idx}
+                fluid={image.node.childImageSharp.fluid}
+              />
+            ))}
+        </GridItem>
+        <GridItem>
+          <LinkBlock
+            as={Link}
+            bgColor={theme.color.dark}
+            to="/about"
+            css={`
+              color: #fff;
+              h4 {
+                &::after {
+                  background-color: ${ props => props.theme.color.pink };
+                }
+              }
+            `}
           >
-            Companies
-          </Link>
-          <Link
-            activeClassName="active"
-            to="/faq"
+            <h4>About CTR</h4>
+            <p>Where we came from, how it started, where we're going and what we're doing</p>
+          </LinkBlock>
+        </GridItem>
+        <GridItem>
+          <LinkBlock
+            as={Link}
+            bgColor="#f2f2f2"
+            to="/team"
           >
-            FAQ
-          </Link>
-          <Link
-            activeClassName="active"
-            to="/news"
+            <h4>Companies</h4>
+            <p>The way we chose to invest</p>
+          </LinkBlock>
+        </GridItem>
+        <GridItem>
+          <LinkBlock
+            as={Link}
+            bgColor={theme.color.pink}
+            to="/FAQ"
           >
-            News
-          </Link>
-        </Column>
-      </Row>
+            <h4>FAQ</h4>
+            <p>These are some of the most frequent questions asked of us and our responses</p>
+          </LinkBlock>
+        </GridItem>
+        <GridItem>
+          {data.images.edges
+            .filter(image => image.node.name === 'office-kitchen')
+            .map((image, idx) => (
+              <Image
+                key={idx}
+                fluid={image.node.childImageSharp.fluid}
+              />
+            ))}
+        </GridItem>
+      </Grid>
     </Container>
   </>
 )
 
 export const ImageQuery = graphql`
   query {
-    image: file(relativePath: { eq: "office.jpg" }) {
+    hero: file(relativePath: { eq: "office.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1348) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    images: allFile(filter: { relativeDirectory: { eq: "home" } }, sort: { order: DESC, fields: [changeTime] }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 640) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          name
         }
       }
     }

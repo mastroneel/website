@@ -58,24 +58,8 @@ const Welcome = styled.div`
   }
 `
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 2fr));
-  grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
-`
-
-const GridItem = styled.div`
-  display: flex;
-  align-items: flex-start;
-  align-self: flex-start;
-
-  .gatsby-image-wrapper {
-    width: 100%;
-  }
-`
-
 const LinkBlock = styled.div`
+  display: inline-block;
   padding: 1.5em 2em;
   background-color: ${ props => props.bgColor };
   color: ${ props => props.theme.color.dark };
@@ -95,6 +79,10 @@ const LinkBlock = styled.div`
     margin: 0;
     padding: 0.8em 0;
   }
+`
+
+const Inner = styled.div`
+  padding: 0.5em;
 `
 
 const Index = ({ data }) => (
@@ -144,106 +132,133 @@ const Index = ({ data }) => (
         margin-bottom: ${ props => props.theme.spacing.lg };
       `}
     >
-      <Grid>
-        <GridItem>
-          {data.images.edges
-            .filter(image => image.node.name === 'scenery')
-            .map((image, idx) => (
-              <Image
-                key={idx}
-                fluid={image.node.childImageSharp.fluid}
-              />
-            ))}
-        </GridItem>
-        <GridItem>
-          <LinkBlock
-            as={Link}
-            bgColor={theme.color.pink}
-            to="/philosophy"
-          >
-            <h4>Philosophy</h4>
-            <p>The way our minds work, what we’re currently thinking about, exploring and our continued revelations</p>
-          </LinkBlock>
-        </GridItem>
-        <GridItem>
-          <LinkBlock
-            as={Link}
-            bgColor={theme.color.yellow}
-            to="/team"
-          >
-            <h4>Our Team</h4>
-            <p>With decades of experience in the world of startups and private placements</p>
-          </LinkBlock>
-        </GridItem>
-        <GridItem>
-          {data.images.edges
-            .filter(image => image.node.name === 'office-people')
-            .map((image, idx) => (
-              <Image
-                key={idx}
-                fluid={image.node.childImageSharp.fluid}
-              />
-            ))}
-        </GridItem>
-        <GridItem>
-          {data.images.edges
-            .filter(image => image.node.name === 'office-boss')
-            .map((image, idx) => (
-              <Image
-                key={idx}
-                fluid={image.node.childImageSharp.fluid}
-              />
-            ))}
-        </GridItem>
-        <GridItem>
-          <LinkBlock
-            as={Link}
-            bgColor={theme.color.dark}
-            to="/about"
+      <Row grid={1 / 2}>
+        <Column>
+          <Inner
             css={`
-              color: #fff;
-              h4 {
-                &::after {
-                  background-color: ${ props => props.theme.color.pink };
-                }
-              }
+              margin-top: 3em;
+              margin-left: 4em;
             `}
           >
-            <h4>About CTR</h4>
-            <p>Where we came from, how it started, where we're going and what we're doing</p>
-          </LinkBlock>
-        </GridItem>
-        <GridItem>
-          <LinkBlock
-            as={Link}
-            bgColor="#f2f2f2"
-            to="/team"
+            {data.images.edges
+              .filter(image => image.node.name === 'scenery')
+              .map((image, idx) => (
+                <Image
+                  key={idx}
+                  fluid={image.node.childImageSharp.fluid}
+                />
+              ))}
+          </Inner>
+          <Inner>
+            <LinkBlock
+              as={Link}
+              bgColor={theme.color.yellow}
+              to="/team"
+            >
+              <h4>Our Team</h4>
+              <p>With decades of experience in the world of startups and private placements</p>
+            </LinkBlock>
+          </Inner>
+          <Inner
+            css={`
+              margin-left: 9em;
+            `}
           >
-            <h4>Companies</h4>
-            <p>The way we chose to invest</p>
-          </LinkBlock>
-        </GridItem>
-        <GridItem>
-          <LinkBlock
-            as={Link}
-            bgColor={theme.color.pink}
-            to="/FAQ"
+            {data.images.edges
+              .filter(image => image.node.name === 'office-boss')
+              .map((image, idx) => (
+                <Image
+                  key={idx}
+                  fluid={image.node.childImageSharp.fluid}
+                />
+              ))}
+          </Inner>
+          <Inner>
+            <LinkBlock
+              as={Link}
+              bgColor={theme.color.dark}
+              to="/about"
+              css={`
+                color: #fff;
+                h4 {
+                  &::after {
+                    background-color: ${ props => props.theme.color.pink };
+                  }
+                }
+              `}
+            >
+              <h4>About CTR</h4>
+              <p>Where we came from, how it started, where we're going and what we're doing</p>
+            </LinkBlock>
+          </Inner>
+          <Inner
+            css={`
+              margin-left: 12em;
+            `}
           >
-            <h4>FAQ</h4>
-            <p>These are some of the most frequent questions asked of us and our responses</p>
-          </LinkBlock>
-        </GridItem>
-        <GridItem>
-          {data.images.edges
-            .filter(image => image.node.name === 'office-kitchen')
-            .map((image, idx) => (
-              <Image
-                key={idx}
-                fluid={image.node.childImageSharp.fluid}
-              />
-            ))}
-        </GridItem>
-      </Grid>
+            <LinkBlock
+              as={Link}
+              bgColor={theme.color.pink}
+              to="/faq"
+            >
+              <h4>FAQ</h4>
+              <p>These are some of the most frequent questions asked of us and our responses</p>
+            </LinkBlock>
+          </Inner>
+        </Column>
+        <Column>
+          <Inner
+            css={`
+              margin-right: 4em;
+            `}
+          >
+            <LinkBlock
+              as={Link}
+              bgColor={theme.color.pink}
+              to="/philosophy"
+            >
+              <h4>Philosophy</h4>
+              <p>
+                The way our minds work, what we’re currently thinking about, exploring and our continued revelations
+              </p>
+            </LinkBlock>
+          </Inner>
+          <Inner>
+            {data.images.edges
+              .filter(image => image.node.name === 'office-people')
+              .map((image, idx) => (
+                <Image
+                  key={idx}
+                  fluid={image.node.childImageSharp.fluid}
+                />
+              ))}
+          </Inner>
+          <Inner>
+            <LinkBlock
+              as={Link}
+              bgColor="#f2f2f2"
+              to="/companies"
+            >
+              <h4>Companies</h4>
+              <p>The way we chose to invest</p>
+            </LinkBlock>
+          </Inner>
+          <Inner
+            css={`
+              margin-right: 6em;
+            `}
+          >
+            {data.images.edges
+              .filter(image => image.node.name === 'office-kitchen')
+              .map((image, idx) => (
+                <Image
+                  key={idx}
+                  fluid={image.node.childImageSharp.fluid}
+                />
+              ))}
+          </Inner>
+        </Column>
+      </Row>
     </Container>
   </>
 )

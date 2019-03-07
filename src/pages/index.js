@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
 import styled from 'styled-components'
-import { rgba, lighten } from 'polished'
+import { rgba, lighten, darken } from 'polished'
 
 import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
@@ -65,6 +65,19 @@ const LinkBlock = styled.div`
   color: ${ props => props.theme.color.dark };
   text-decoration: none;
   font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 transparent;
+  z-index: 1000;
+
+  :hover {
+    transform: translateY(-15%) scale(1.1);
+    box-shadow: 0 4px 20px ${ props => rgba(darken(0.3, props.bgColor), 0.5) };
+
+    h4::after {
+      width: 100%;
+      right: 0;
+    }
+  }
 
   h4 {
     ${ Underline }
@@ -72,6 +85,7 @@ const LinkBlock = styled.div`
 
     &::after {
       background-color: #fff;
+      transition: width 0.2s ease;
     }
   }
 
@@ -238,6 +252,13 @@ const Index = ({ data }) => (
               as={Link}
               bgColor="#f2f2f2"
               to="/companies"
+              css={`
+                h4 {
+                  &::after {
+                    background-color: ${ props => props.theme.color.pink };
+                  }
+                }
+              `}
             >
               <h4>Companies</h4>
               <p>The way we chose to invest</p>

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
-import theme from '../../theme'
+import theme, { devices } from '../../theme'
 
 const Wrapper = styled.div`
   background-color: ${ props => props.bgColor };
@@ -9,9 +9,14 @@ const Wrapper = styled.div`
 `
 
 const Container = styled.div`
-  width: ${ props =>
+  width: 100%;
+  max-width: ${ props =>
     props.size === 'fluid' ? '100%' : props.theme.breakpoints[props.size] || props.theme.breakpoints.xl };
   margin: 0 auto;
+
+  @media (${ devices.desktop }) {
+    padding: 0 2em;
+  }
 `
 
 const Row = styled.div`

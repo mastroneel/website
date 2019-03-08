@@ -9,7 +9,7 @@ import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
 import Heading, { Underline } from '../components/ui/Heading'
 import Button from '../components/ui/Buttons'
-import theme from '../theme'
+import theme, { devices } from '../theme'
 
 const Welcome = styled.div`
   background-color: ${ props => props.theme.color.blue };
@@ -55,6 +55,12 @@ const Welcome = styled.div`
     color: ${ props => lighten(0.6, props.theme.color.blue) };
     max-width: 60%;
     font-size: 2rem;
+  }
+
+  @media (${ devices.desktop }) {
+    p {
+      max-width: 100%;
+    }
   }
 `
 

@@ -1,4 +1,4 @@
-export default {
+const theme = {
   color: {
     dark: '#180035',
     grey: '#554971',
@@ -28,3 +28,12 @@ export default {
     xl: '9.2em',
   },
 }
+
+const devices = {
+  mobile: `max-width: ${ theme.breakpoints.sm }`,
+  tablet: `max-width: ${ theme.breakpoints.md }`,
+  desktopSm: `max-width: ${ theme.breakpoints.lg }`,
+  desktop: `max-width: ${ theme.breakpoints.xl }`,
+}
+
+export { theme as default, devices }

@@ -65,21 +65,15 @@ const Navigation = () => (
     </Link>
     <Link
       activeClassName="active"
-      to="/about"
-    >
-      About
-    </Link>
-    <Link
-      activeClassName="active"
       to="/faq"
     >
       FAQ
     </Link>
     <Link
       activeClassName="active"
-      to="/news"
+      to="/about"
     >
-      News
+      About
     </Link>
   </Nav>
 )

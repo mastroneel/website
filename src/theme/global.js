@@ -2,7 +2,7 @@ import { css, createGlobalStyle } from 'styled-components'
 import { rgba, lighten, linearGradient } from 'polished'
 import 'normalize.css'
 
-import theme from './index'
+import theme, { devices } from './index'
 
 function setHeadingSize () {
   let headings = ''
@@ -37,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${ props => props.theme.text.baseSize };
     margin-top: ${ props => props.theme.header.height };
     line-height: 1.745;
+
+    @media (${ devices.tablet }) {
+      margin-top: 0;
+    }
   }
 
   ${ setHeadingSize() }

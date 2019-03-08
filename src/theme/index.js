@@ -20,6 +20,7 @@ const theme = {
     md: '860px',
     lg: '1140px',
     xl: '1348px',
+    nav: '945px',
   },
   spacing: {
     sm: '2em',
@@ -34,6 +35,7 @@ const devices = {
   tablet: `max-width: ${ theme.breakpoints.md }`,
   desktopSm: `max-width: ${ theme.breakpoints.lg }`,
   desktop: `max-width: ${ theme.breakpoints.xl }`,
+  nav: `max-width: ${ theme.breakpoints.nav }`,
 }
 
 export { theme as default, devices }

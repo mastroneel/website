@@ -1,9 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { rgba } from 'polished'
 
+import { devices } from '../theme'
 import logo from '../images/ctr_cap.svg'
 import { Container, Row, Column } from './ui/Grid'
 import Navigation from './Navigation'
@@ -31,10 +31,26 @@ const HeaderStyle = styled.header`
     }
     &:nth-child(2) {
       flex: 3 1 0;
+
+      @media (${ devices.nav }) {
+        order: 3;
+        align-items: flex-end;
+        flex: 1 1 0;
+      }
     }
     &:nth-child(3) {
       flex: 1 1 0;
+
+      @media (${ devices.nav }) {
+        order: 2;
+        align-items: center;
+        flex: 3 1 0;
+      }
     }
+  }
+
+  @media (${ devices.tablet }) {
+    position: static;
   }
 `
 

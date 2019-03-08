@@ -99,190 +99,183 @@ const Inner = styled.div`
   padding: 0.5em;
 `
 
-const Index = ({ data }) => (
-  <>
-    <SEO
-      title="Home"
-      keywords={[`gatsby`, `application`, `react`]}
-    />
-    <Container
-      css={`
-        margin-top: ${ props => props.theme.spacing.xl };
-        margin-bottom: ${ props => props.theme.spacing.lg };
-      `}
-    >
-      <Row>
-        <Column>
-          <Welcome>
-            <Heading
-              appearance="light"
-              small="about"
-            >
-              Conscious Capital
-            </Heading>
-            <p>
-              Financial capital that is raised, built, managed, and deployed strategically, for the purpose of raising
-              {` `}
-              <strong>human consciousness</strong> and expanding the scope of activities that can measurably improve
-              {` `}
-              <strong>world conditions</strong>. A way to change the world, live fulfilled through the impact you make,
-              and earn returns which have been proven to {` `}
-              <strong>outperform the status quo</strong>.
-            </p>
-            <Button
-              as={Link}
-              to="/philosophy"
-              appearance="secondary"
-            >
-              Our Philosophy
-            </Button>
-            <Image fluid={data.hero.childImageSharp.fluid} />
-          </Welcome>
-        </Column>
-      </Row>
-    </Container>
-    <Container
-      css={`
-        margin-bottom: ${ props => props.theme.spacing.lg };
-      `}
-    >
-      <Row grid={1 / 2}>
-        <Column>
-          <Inner
-            css={`
-              margin-top: 3em;
-              margin-left: 4em;
-            `}
-          >
-            {data.images.edges
-              .filter(image => image.node.name === 'scenery')
-              .map((image, idx) => (
-                <Image
-                  key={idx}
-                  fluid={image.node.childImageSharp.fluid}
-                />
-              ))}
-          </Inner>
-          <Inner>
-            <LinkBlock
-              as={Link}
-              bgColor={theme.color.yellow}
-              to="/team"
-            >
-              <h4>Our Team</h4>
-              <p>With decades of experience in the world of startups and private placements</p>
-            </LinkBlock>
-          </Inner>
-          <Inner
-            css={`
-              margin-left: 9em;
-            `}
-          >
-            {data.images.edges
-              .filter(image => image.node.name === 'office-boss')
-              .map((image, idx) => (
-                <Image
-                  key={idx}
-                  fluid={image.node.childImageSharp.fluid}
-                />
-              ))}
-          </Inner>
-          <Inner>
-            <LinkBlock
-              as={Link}
-              bgColor={theme.color.dark}
-              to="/about"
-              css={`
-                color: #fff;
-                h4 {
-                  &::after {
-                    background-color: ${ props => props.theme.color.pink };
-                  }
-                }
-              `}
-            >
-              <h4>About CTR</h4>
-              <p>Where we came from, how it started, where we're going and what we're doing</p>
-            </LinkBlock>
-          </Inner>
-          <Inner
-            css={`
-              margin-left: 12em;
-            `}
-          >
-            <LinkBlock
-              as={Link}
-              bgColor={theme.color.pink}
-              to="/faq"
-            >
-              <h4>FAQ</h4>
-              <p>These are some of the most frequent questions asked of us and our responses</p>
-            </LinkBlock>
-          </Inner>
-        </Column>
-        <Column>
-          <Inner
-            css={`
-              margin-right: 4em;
-            `}
-          >
-            <LinkBlock
-              as={Link}
-              bgColor={theme.color.pink}
-              to="/philosophy"
-            >
-              <h4>Philosophy</h4>
+function filterImage (imgArr, imgName) {
+  if (Array.isArray(imgArr) && typeof imgName === 'string') {
+    return imgArr
+      .filter(image => image.node.name === imgName)
+      .map((image, idx) => <Image
+        key={idx}
+        fluid={image.node.childImageSharp.fluid}
+      />)
+  } else {
+    if (!Array.isArray(imgArr)) {
+      console.error(`Expected graphql data array for ${ imgArr }, but received ${ typeof imgArr }`)
+    }
+    if (typeof imgName !== 'string') {
+      console.error(`Expected string for ${ imgName } but received ${ typeof imgName }`)
+    }
+  }
+}
+
+const Index = ({ data }) => {
+  const { edges: images } = data.images
+  const { hero } = data
+
+  return (
+    <>
+      <SEO
+        title="Home"
+        keywords={[`gatsby`, `application`, `react`]}
+      />
+      <Container
+        css={`
+          margin-top: ${ props => props.theme.spacing.xl };
+          margin-bottom: ${ props => props.theme.spacing.lg };
+        `}
+      >
+        <Row>
+          <Column>
+            <Welcome>
+              <Heading
+                appearance="light"
+                small="about"
+              >
+                Conscious Capital
+              </Heading>
               <p>
-                The way our minds work, what we’re currently thinking about, exploring and our continued revelations
+                Financial capital that is raised, built, managed, and deployed strategically, for the purpose of raising
+                {` `}
+                <strong>human consciousness</strong> and expanding the scope of activities that can measurably improve
+                {` `}
+                <strong>world conditions</strong>. A way to change the world, live fulfilled through the impact you
+                make, and earn returns which have been proven to {` `}
+                <strong>outperform the status quo</strong>.
               </p>
-            </LinkBlock>
-          </Inner>
-          <Inner>
-            {data.images.edges
-              .filter(image => image.node.name === 'office-people')
-              .map((image, idx) => (
-                <Image
-                  key={idx}
-                  fluid={image.node.childImageSharp.fluid}
-                />
-              ))}
-          </Inner>
-          <Inner>
-            <LinkBlock
-              as={Link}
-              bgColor="#f2f2f2"
-              to="/companies"
+              <Button
+                as={Link}
+                to="/philosophy"
+                appearance="secondary"
+              >
+                Our Philosophy
+              </Button>
+              <Image fluid={hero.childImageSharp.fluid} />
+            </Welcome>
+          </Column>
+        </Row>
+      </Container>
+      <Container
+        css={`
+          margin-bottom: ${ props => props.theme.spacing.lg };
+        `}
+      >
+        <Row grid={1 / 2}>
+          <Column>
+            <Inner
               css={`
-                h4 {
-                  &::after {
-                    background-color: ${ props => props.theme.color.pink };
-                  }
-                }
+                margin-top: 3em;
+                margin-left: 4em;
               `}
             >
-              <h4>Companies</h4>
-              <p>The way we chose to invest</p>
-            </LinkBlock>
-          </Inner>
-          <Inner
-            css={`
-              margin-right: 6em;
-            `}
-          >
-            {data.images.edges
-              .filter(image => image.node.name === 'office-kitchen')
-              .map((image, idx) => (
-                <Image
-                  key={idx}
-                  fluid={image.node.childImageSharp.fluid}
-                />
-              ))}
-          </Inner>
-        </Column>
-      </Row>
-    </Container>
-  </>
-)
+              {filterImage(images, 'scenery')}
+            </Inner>
+            <Inner>
+              <LinkBlock
+                as={Link}
+                bgColor={theme.color.yellow}
+                to="/team"
+              >
+                <h4>Our Team</h4>
+                <p>With decades of experience in the world of startups and private placements</p>
+              </LinkBlock>
+            </Inner>
+            <Inner
+              css={`
+                margin-left: 9em;
+              `}
+            >
+              {filterImage(images, 'office-boss')}
+            </Inner>
+            <Inner>
+              <LinkBlock
+                as={Link}
+                bgColor={theme.color.dark}
+                to="/about"
+                css={`
+                  color: #fff;
+                  h4 {
+                    &::after {
+                      background-color: ${ props => props.theme.color.pink };
+                    }
+                  }
+                `}
+              >
+                <h4>About CTR</h4>
+                <p>Where we came from, how it started, where we're going and what we're doing</p>
+              </LinkBlock>
+            </Inner>
+            <Inner
+              css={`
+                margin-left: 12em;
+              `}
+            >
+              <LinkBlock
+                as={Link}
+                bgColor={theme.color.pink}
+                to="/faq"
+              >
+                <h4>FAQ</h4>
+                <p>These are some of the most frequent questions asked of us and our responses</p>
+              </LinkBlock>
+            </Inner>
+          </Column>
+          <Column>
+            <Inner
+              css={`
+                margin-right: 4em;
+              `}
+            >
+              <LinkBlock
+                as={Link}
+                bgColor={theme.color.pink}
+                to="/philosophy"
+              >
+                <h4>Philosophy</h4>
+                <p>
+                  The way our minds work, what we’re currently thinking about, exploring and our continued revelations
+                </p>
+              </LinkBlock>
+            </Inner>
+            <Inner>{filterImage(images, 'office-people')}</Inner>
+            <Inner>
+              <LinkBlock
+                as={Link}
+                bgColor="#f2f2f2"
+                to="/companies"
+                css={`
+                  h4 {
+                    &::after {
+                      background-color: ${ props => props.theme.color.pink };
+                    }
+                  }
+                `}
+              >
+                <h4>Companies</h4>
+                <p>The way we chose to invest</p>
+              </LinkBlock>
+            </Inner>
+            <Inner
+              css={`
+                margin-right: 6em;
+              `}
+            >
+              {filterImage(images, 'office-kitchen')}
+            </Inner>
+          </Column>
+        </Row>
+      </Container>
+    </>
+  )
+}
 
 export const ImageQuery = graphql`
   query {

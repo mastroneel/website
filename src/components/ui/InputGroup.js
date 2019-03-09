@@ -1,8 +1,7 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
-import { rgba, lighten } from 'polished'
-
-import { Button } from './Buttons'
+import styled from 'styled-components'
+import { lighten } from 'polished'
+import { devices } from '../../theme'
 
 const InputGroup = styled.div`
   width: 100%;
@@ -20,6 +19,10 @@ const InputGroup = styled.div`
 
     :focus {
       border-color: ${ props => props.theme.color.pink };
+    }
+
+    @media (${ devices.tablet }) {
+      margin-right: 0;
     }
   }
 

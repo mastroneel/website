@@ -17,22 +17,10 @@ const Container = styled.div`
   @media (${ devices.desktop }) {
     padding: 0 2em;
   }
-`
 
-const Row = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: ${ props => props.dir || 'row' };
-  align-items: ${ props => (props.align ? props.align : null) };
-  justify-content: ${ props => (props.justify ? props.justify : null) };
-  ${ ({ grid }) =>
-    grid &&
-    css`
-      & > ${ Column } {
-        flex-basis: ${ (grid * 100).toFixed(2) }%;
-        max-width: ${ (grid * 100).toFixed(2) }%;
-      }
-    ` }
+  @media (${ devices.tablet }) {
+    margin: 2em 0;
+  }
 `
 
 const Column = styled.div`
@@ -41,6 +29,30 @@ const Column = styled.div`
   flex-direction: ${ props => props.dir || 'column' };
   align-items: ${ props => (props.align ? props.align : null) };
   justify-content: ${ props => (props.justify ? props.justify : null) };
+`
+
+const Row = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: ${ props => props.dir || 'row' };
+  align-items: ${ props => (props.align ? props.align : null) };
+  justify-content: ${ props => (props.justify ? props.justify : null) };
+
+  ${ ({ grid }) =>
+    grid &&
+    css`
+      & > ${ Column } {
+        flex-basis: ${ (grid * 100).toFixed(2) }%;
+        max-width: ${ (grid * 100).toFixed(2) }%;
+      }
+    ` }
+
+  @media (${ devices.tablet }) {
+    ${ Column } {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 `
 
 Container.propTypes = {

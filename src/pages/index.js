@@ -62,6 +62,22 @@ const Welcome = styled.div`
       max-width: 100%;
     }
   }
+
+  @media (${ devices.tablet }) {
+    padding: 2em;
+
+    h1 {
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 1.7rem;
+    }
+
+    ::after {
+      display: none;
+    }
+  }
 `
 
 const LinkBlock = styled.div`
@@ -99,10 +115,18 @@ const LinkBlock = styled.div`
     margin: 0;
     padding: 0.8em 0;
   }
+
+  @media (${ devices.tablet }) {
+    width: 100%;
+  }
 `
 
 const Inner = styled.div`
   padding: 0.5em;
+
+  @media (${ devices.desktopSm }) {
+    margin: 0;
+  }
 `
 
 function filterImage (imgArr, imgName) {

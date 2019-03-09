@@ -5,10 +5,16 @@ import Heading from './ui/Heading'
 import { Container, Row, Column } from './ui/Grid'
 import Button from './ui/Buttons'
 import InputGroup from './ui/InputGroup'
+import { devices } from '../theme'
 
 const FormArea = styled.div`
   padding-top: 4em;
   padding-bottom: 4em;
+
+  @media (${ devices.tablet }) {
+    padding: 0;
+    margin: 0 -2em;
+  }
 `
 
 const Contact = () => (
@@ -32,7 +38,13 @@ const Contact = () => (
             method="POST"
             data-netlify-recaptcha="true"
             data-netlify="true"
-            style={{ marginRight: '2em' }}
+            css={`
+              margin-right: 2em;
+
+              @media (${ devices.tablet }) {
+                margin-right: 0;
+              }
+            `}
           >
             <Row
               grid={1 / 2}
@@ -45,7 +57,9 @@ const Contact = () => (
                     type="text"
                     name="name"
                     placeholder="Your Name"
-                    style={{ marginRight: '1em' }}
+                    css={`
+                      margin-right: 1em;
+                    `}
                   />
                 </InputGroup>
               </Column>

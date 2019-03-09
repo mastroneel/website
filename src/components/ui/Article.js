@@ -13,7 +13,7 @@ const Article = styled.article`
   }
 
   @media (${ devices.tablet }) {
-    padding: 0;
+    padding: 0.7em 1.5em;
   }
 `
 

@@ -8,7 +8,7 @@ import { Wrapper, Container, Row, Column } from '../components/ui/Grid'
 import PageIntro from '../components/PageIntro'
 import Article from '../components/ui/Article'
 import { Underline } from '../components/ui/Heading'
-import theme from '../theme'
+import theme, { devices } from '../theme'
 
 import about from '../images/about.svg'
 import rectangle from '../images/rect-ill.svg'
@@ -44,6 +44,14 @@ const UnderlineWhite = css`
 
 const ColumnSpacing = css`
   padding: 0 2.5em;
+
+  &:first-child {
+    border-right: 1px solid ${ theme.color.pink };
+
+    @media (${ devices.tablet }) {
+      border-right: 0;
+    }
+  }
 `
 
 const DarkBgIllustration = css`
@@ -123,7 +131,7 @@ export default ({ data }) => (
             color: #fff;
           `}
         >
-          <Column css={ColumnSpacing + `border-right: 1px solid ${ theme.color.pink }`}>
+          <Column css={ColumnSpacing}>
             <p>
               Victoria, BC, rarely sees snow, but in the memorable 2006 brutal winter storm, messages were flying back
               and forth between Gordy and Aaron. Aaron had no power for a week and directed the process from landline.
@@ -172,7 +180,10 @@ export default ({ data }) => (
         </Row>
       </Container>
     </Wrapper>
-    <Container className="content-styled" size="md">
+    <Container
+      className="content-styled"
+      size="md"
+    >
       <Row>
         <Column css={MarkdownStyle}>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />

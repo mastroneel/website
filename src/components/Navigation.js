@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { rgba, stripUnit } from 'polished'
 import theme, { devices } from '../theme'
+import Button from './ui/Buttons'
 
 const Nav = styled.nav`
   display: ${ props => (props.active ? 'flex' : 'none') };
@@ -59,6 +60,14 @@ const Nav = styled.nav`
       &::after {
         display: none;
       }
+    }
+  }
+
+  ${ Button } {
+    display: none;
+
+    @media (${ devices.tablet }) {
+      display: block;
     }
   }
 `
@@ -185,6 +194,15 @@ class Navigation extends Component {
           >
             About
           </Link>
+          <Button
+            as="a"
+            appearance="primary"
+            href="mailto:fund@ctr.capital"
+            alt="Get in touch"
+            target="_blank"
+          >
+            Get in Touch
+          </Button>
         </Nav>
       </>
     )

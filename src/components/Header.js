@@ -29,22 +29,21 @@ const HeaderStyle = styled.header`
     &:nth-child(1) {
       flex: 1 1 0;
     }
+
     &:nth-child(2) {
       flex: 3 1 0;
 
       @media (${ devices.nav }) {
-        order: 3;
         align-items: flex-end;
         flex: 1 1 0;
       }
     }
+
     &:nth-child(3) {
       flex: 1 1 0;
 
       @media (${ devices.nav }) {
-        order: 2;
-        align-items: center;
-        flex: 3 1 0;
+        display: none;
       }
     }
   }

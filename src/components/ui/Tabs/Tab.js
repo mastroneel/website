@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-
 import { lighten, rgba } from 'polished'
+import { devices } from '../../../theme'
 
 const TabStyle = styled.div`
   color: ${ props =>
@@ -32,6 +32,12 @@ const TabStyle = styled.div`
     opacity: ${ props => (props.activeTab === props.styledLabel ? '1' : '0') };
     transition: opacity 0.2s ease;
     box-shadow: 0 0 0 5px ${ props => rgba(props.theme.color.pink, 0.12) };
+  }
+
+  @media (${ devices.tablet }) {
+    &::before {
+      left: -4px;
+    }
   }
 `
 

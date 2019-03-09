@@ -127,7 +127,7 @@ class Navigation extends Component {
   }
 
   clearMenu = async () => {
-    if (this.state.mobileNavActive === true) {
+    if (this.state.mobileNavActive === true && window.innerWidth <= stripUnit(theme.breakpoints.nav)) {
       await this.setState({ mobileNavActive: false })
     }
   }

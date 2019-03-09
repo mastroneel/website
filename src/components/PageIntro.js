@@ -6,6 +6,7 @@ import { rgba } from 'polished'
 import { Container, Row, Column } from './ui/Grid'
 import Heading from './ui/Heading'
 import mouse from '../images/mouse.svg'
+import { devices } from '../theme'
 
 const Spacing = css`
   padding: 5em 0;
@@ -26,6 +27,11 @@ const TextBody = styled.div`
   p {
     color: ${ props => rgba(props.theme.color.dark, 0.8) };
   }
+
+  @media (${ devices.tablet }) {
+    max-width: 100%;
+    text-align: center;
+  }
 `
 
 const ImageBody = styled.div`
@@ -33,6 +39,15 @@ const ImageBody = styled.div`
 
   img {
     height: 100%;
+  }
+
+  @media (${ devices.tablet }) {
+    height: 50vh;
+  }
+
+  @media (${ devices.mobile }) {
+    height: 250px;
+    margin-top: 2em;
   }
 `
 
@@ -64,6 +79,10 @@ const Mouse = styled.div`
   width: 24px;
   height: 32px;
   position: relative;
+
+  @media (${ devices.tablet }) {
+    display: none;
+  }
 `
 
 const Scroll = styled.div`

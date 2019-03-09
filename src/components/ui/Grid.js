@@ -19,7 +19,7 @@ const Container = styled.div`
   }
 
   @media (${ devices.tablet }) {
-    margin: 2em 0;
+    padding: 2em;
   }
 `
 

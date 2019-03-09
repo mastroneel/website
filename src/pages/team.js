@@ -7,6 +7,7 @@ import { rgba } from 'polished'
 import { Container, Row, Column } from '../components/ui/Grid'
 import SEO from '../components/seo'
 import PageIntro from '../components/PageIntro'
+import theme, { devices } from '../theme'
 
 import teamIllustration from '../images/team.svg'
 
@@ -15,12 +16,14 @@ const CardRow = styled(Row)`
   padding: 5em 0;
   position: relative;
 
-  &:nth-child(even) {
-    .gatsby-image-wrapper {
-      transform: translate(-2em);
-    }
+  @media (min-width: ${ theme.breakpoints.md }) {
+    &:nth-child(even) {
+      .gatsby-image-wrapper {
+        transform: translate(-2em);
+      }
 
-    background-color: ${ props => rgba(props.theme.color.dark, 0.02) };
+      background-color: ${ props => rgba(props.theme.color.dark, 0.02) };
+    }
   }
 
   h2 {
@@ -94,6 +97,16 @@ const CardRow = styled(Row)`
       }
     }
   }
+
+  @media (${ devices.desktopSm }) {
+    overflow: hidden;
+  }
+
+  @media (${ devices.tablet }) {
+    margin: 0;
+    padding: 0;
+    margin-top: 2em;
+  }
 `
 
 const Dots = css`
@@ -118,12 +131,25 @@ const Dots = css`
     top: -60px;
     right: -60px;
   }
+
+  @media (${ devices.mobile }) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 `
 
 const Title = styled(Column)`
   padding-top: 3em;
   transform: translateX(2.5em);
   z-index: 500;
+
+  @media (${ devices.tablet }) {
+    margin-bottom: 2em;
+    transform: translateX(0);
+    align-items: flex-start;
+  }
 `
 
 export default ({ data }) => {

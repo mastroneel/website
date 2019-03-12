@@ -89,7 +89,7 @@ const Footer = () => (
             >
               Email
             </Heading>
-            <a href="#">fund@ctr.capital</a>
+            <a href="mailto:fund@ctr.capital">fund@ctr.capital</a>
           </FooterCell>
         </Column>
         <Column>

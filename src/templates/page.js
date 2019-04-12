@@ -1,7 +1,6 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
-import { Container, Row, Column } from '../components/ui/Grid'
+import { Container } from '../components/ui/Grid'
 import SEO from '../components/seo'
 import PageIntro from '../components/PageIntro'
 import Article from '../components/ui/Article'
@@ -10,15 +9,13 @@ import companies from '../images/companies.svg'
 import news from '../images/news.svg'
 import philosophy from '../images/philosophy.svg'
 
-export default ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+export default ({ children, pageContext }) => {
+  const { frontmatter } = pageContext
   const introImage = {
     companies: companies,
     news: news,
     philosophy: philosophy,
   }
-
   return (
     <>
       <SEO title={frontmatter.title} />
@@ -32,22 +29,8 @@ export default ({ data }) => {
         }}
       />
       <Container>
-        <Article dangerouslySetInnerHTML={{ __html: html }} />
+        <Article>{children}</Article>
       </Container>
     </>
   )
 }
-
-export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path } }) {
-      html
-      frontmatter {
-        title
-        intro
-        subtitle
-        imageSource
-      }
-    }
-  }
-`

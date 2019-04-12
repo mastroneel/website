@@ -34,6 +34,13 @@ module.exports = {
         path: `${ __dirname }/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `layout`,
+        path: `${ __dirname }/src/pages`,
+      },
+    },
     `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
@@ -52,6 +59,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          layout: require.resolve(`./src/templates/page.js`),
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     {

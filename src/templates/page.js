@@ -3,7 +3,6 @@ import React from 'react'
 import { Container } from '../components/ui/Grid'
 import SEO from '../components/seo'
 import PageIntro from '../components/PageIntro'
-import Article from '../components/ui/Article'
 
 import companies from '../images/companies.svg'
 import news from '../images/news.svg'
@@ -28,9 +27,7 @@ export default ({ children, pageContext }) => {
           alt: `${ frontmatter.title } illustration`,
         }}
       />
-      <Container>
-        <Article>{children}</Article>
-      </Container>
+      {children}
     </>
   )
 }

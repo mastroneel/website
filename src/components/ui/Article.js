@@ -1,13 +1,15 @@
 import styled from 'styled-components'
+import { rgba } from 'polished'
 import { Underline } from './Heading'
 import { devices } from '../../theme'
 
-const Article = styled.article`
-  max-width: 980px;
-  padding: 0 4em;
-  margin: 0 auto;
-  background-color: #fff;
+const Separator = styled.hr`
+  border: 0;
+  border-bottom: 1px solid ${ props => rgba(props.theme.color.grey, 0.07)};
+  margin: 4em 0;
+`
 
+const Article = styled.article`
   h2 {
     ${ Underline }
   }
@@ -17,4 +19,4 @@ const Article = styled.article`
   }
 `
 
-export default Article
+export { Article as default, Separator }

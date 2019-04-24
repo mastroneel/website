@@ -1,15 +1,19 @@
-import styled from 'styled-components'
-import { rgba } from 'polished'
+import styled, { css } from 'styled-components'
+import { rgba, linearGradient } from 'polished'
+
 import { Underline } from './Heading'
-import { devices } from '../../theme'
+import theme, { devices } from '../../theme'
+import rectangle from '../../images/rect-ill.svg'
 
 const Separator = styled.hr`
   border: 0;
-  border-bottom: 1px solid ${ props => rgba(props.theme.color.grey, 0.07)};
+  border-bottom: 1px solid ${ props => rgba(props.theme.color.grey, 0.07) };
   margin: 4em 0;
 `
 
 const Article = styled.article`
+  background-color: ${ props => props.bgColor || '#fff' };
+
   h2 {
     ${ Underline }
   }
@@ -19,4 +23,60 @@ const Article = styled.article`
   }
 `
 
-export { Article as default, Separator }
+const Box = styled(Article)`
+  background-color: #fff;
+  position: relative;
+  padding: 2em;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    ${ linearGradient({
+    colorStops: [theme.color.blue, theme.color.pink],
+    toDirection: '0deg',
+    fallback: props => props.theme.color.pink,
+  }) }
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+`
+
+const UnderlineWhite = css`
+  ${ Underline }
+  color: #fff;
+`
+
+const ColumnSpacing = css`
+  padding: 0 2.5em;
+
+  &:first-child {
+    border-right: 1px solid ${ theme.color.pink };
+
+    @media (${ devices.tablet }) {
+      border-right: 0;
+    }
+  }
+`
+
+const DarkBgIllustration = css`
+  background-image: url(${ rectangle });
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: bottom right;
+  padding-bottom: 20%;
+`
+
+const MarkdownStyle = css`
+  h3 {
+    ${ Underline }
+  }
+`
+
+export { Article as default, Separator, Box, UnderlineWhite, ColumnSpacing, DarkBgIllustration, MarkdownStyle }

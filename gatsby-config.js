@@ -9,13 +9,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${ __dirname }/src/content/markdown`,
-        name: 'markdown-pages',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: 'json-content',
         path: `./src/content/json/`,
       },
@@ -64,13 +57,13 @@ module.exports = {
       options: {
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1035,
               sizeByPixelDensity: true,
               linkImagesToOriginal: false,
-            }
-          }
+            },
+          },
         ],
         defaultLayouts: {
           layout: require.resolve(`./src/templates/page.js`),

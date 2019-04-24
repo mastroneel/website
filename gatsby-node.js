@@ -30,19 +30,6 @@ exports.createPages = async ({ actions, graphql }) => {
 
   await graphql(`
     {
-      pages: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-        filter: { fileAbsolutePath: { regex: "/markdown/" } }
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
       team: allMarkdownRemark(
         sort: { order: ASC, fields: [frontmatter___order] }
         limit: 1000
@@ -77,14 +64,6 @@ exports.createPages = async ({ actions, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
-
-    result.data.pages.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: pageTemplate,
-        context: {}, // additional data can be passed via context
-      })
-    })
 
     result.data.team.edges.forEach(({ node, next, previous }) => {
       createPage({

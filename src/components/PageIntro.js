@@ -141,4 +141,4 @@ PageIntro.propTypes = {
   }),
 }
 
-export default PageIntro
+export { PageIntro as default, TextBody }

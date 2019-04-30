@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components'
 
 import theme from '../theme'
 import GlobalStyles from '../theme/global'
-import { Container } from '../components/ui/Grid'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 

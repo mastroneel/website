@@ -1,5 +1,4 @@
 import { css, createGlobalStyle } from 'styled-components'
-import { rgba, lighten, linearGradient } from 'polished'
 import 'normalize.css'
 
 import theme, { devices } from './index'

@@ -6,7 +6,7 @@ import Seo from '../components/seo'
 import PageIntro from '../components/PageIntro'
 import { Wrapper, Container, Row, Column } from '../components/ui/Grid'
 import theme from '../theme'
-import Heading, { Underline } from '../components/ui/Heading'
+import { Underline } from '../components/ui/Heading'
 import Tabs from '../components/ui/Tabs'
 import Button, { ButtonGroup } from '../components/ui/Buttons'
 

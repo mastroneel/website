@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { rgba, lighten } from 'polished'
+import { lighten } from 'polished'
 
 const Primary = css`
   background-color: ${ props => lighten(0.375, props.theme.color.pink) };

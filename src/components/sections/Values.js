@@ -9,37 +9,42 @@ import { TextBody } from '../PageIntro'
 
 const Content = [
   {
-    title: 'CTR VALUES AND PRINCIPLES',
+    title: 'CTR Values and Principles',
     subtitle: 'Who are we?',
     text: 'CTR Values...',
   },
   {
-    title: 'The Problem',
+    title: 'The Problem We Can Resolve',
     subtitle: 'Our Problem',
     text: 'The problem is',
   },
   {
-    title: 'Vision and Mission',
+    title: 'Our Belief That CCF Offers A Solution',
     subtitle: 'Conscious Capital Fund',
     text: 'Our vision and mission is',
   },
   {
-    title: 'Execution',
+    title: 'The CCF Vision and Mission',
     subtitle: 'Lorem',
     text: 'Ipsum',
   },
   {
-    title: 'Triple ROI',
+    title: 'How That Vision Affects Our Execution',
     subtitle: 'What we believe in',
     text: 'Something',
   },
   {
-    title: 'Proximity',
+    title: 'What We Mean By Proximity',
     subtitle: 'What we mean',
     text: 'Proximity is',
   },
   {
-    title: 'Opportunities',
+    title: 'Why We Believe In The Triple ROI',
+    subtitle: 'What we offer',
+    text: 'It is...',
+  },
+  {
+    title: 'Our Commitment To Building A Community',
     subtitle: 'What we offer',
     text: 'It is...',
   },

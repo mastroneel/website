@@ -9,7 +9,7 @@ import { TextBody } from '../PageIntro'
 
 const Content = [
   {
-    title: 'Our Values',
+    title: 'CTR VALUES AND PRINCIPLES',
     subtitle: 'Who are we?',
     text: 'CTR Values...',
   },

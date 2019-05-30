@@ -106,6 +106,7 @@ export default ({ data }) => {
                     easing="ease-in-out"
                   >
                     <p>{qa.a}</p>
+                    <small>{qa.d}</small>
                   </Collapsible>
                 </FaqBody>
               ))}

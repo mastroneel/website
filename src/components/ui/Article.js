@@ -38,6 +38,10 @@ const Article = styled.article`
     }
   }
 
+  a {
+    color: ${ props => props.theme.color.pink };
+  }
+
   @media (${ devices.tablet }) {
     padding: 0.7em 1.5em;
   }

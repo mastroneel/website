@@ -5,20 +5,22 @@ subtitle: "Our Thoughts"
 imageSource: "philosophy"
 ---
 
-import { useStaticQuery, graphql } from "gatsby";
-import { rgba } from "polished";
-import { Wrapper, Container, Row } from "../components/ui/Grid";
-import Article, { Separator } from "../components/ui/Article";
-import theme from "../theme";
-import Values from "../components/sections/Values";
-import TOC from "../components/sections/TableOfContents";
-import Sticky from "react-stickynode";
+import { useStaticQuery, graphql } from "gatsby"
+import { rgba } from "polished"
+import { Wrapper, Container, Row } from "../components/ui/Grid"
+import Article, { Separator } from "../components/ui/Article"
+import theme from "../theme"
+import Values from "../components/sections/Values"
+import TOC from "../components/sections/TableOfContents"
+import Sticky from "react-stickynode"
+import Super from '../components/ui/Super'
 
 <Separator />
 <Container size="md">
 <Article>
 
-Conscious Capital Fund (CCF) grew out of the Conscious Thought Revolution (CTR) that was founded in 2014, when two successful entrepreneurs, Gordy Bal and Aaron Samsonoff, decided to pool their talents in order to focus on Conscious Capitalism,
+Conscious Capital Fund (CCF) grew out of the [Conscious Thought Revolution (CTR)]((https://ctr.com/)) that was founded in 2014, when two successful entrepreneurs, Gordy Bal and Aaron Samsonoff, decided to pool their talents in order to focus on Conscious Capitalism.
+
 
 They made a commitment to raise consciousness of global challenges, and invest in companies who were offering solutions.
 
@@ -52,7 +54,7 @@ As we work with companies who are committed to conscious capitalism, these are o
 - Socially-responsible investment
 - Entrepreneurship
 - Win-Win
-- Sustainable Development Goals
+- [Sustainable Development Goals](https://sustainabledevelopment.un.org/?menu=1300)
 
 </Article>
 </Container>
@@ -73,21 +75,25 @@ As we work with companies who are committed to conscious capitalism, these are o
 
 There are four dimensions to the problem that CCF is targeting.
 
-1. Global Challenges Exist
+#### 1. Global Challenges Exist
 
-   According to the World Bank, 736 million people live in extreme poverty, surviving on less than \$1.90 a day, and with no hope of acquiring the assets that would lead to financial inclusion and a voice in decisions about their own future.
-   Oxfam reports that millions of people are facing starvation across East Africa, South Sudan and Yemen. Oxfam is on the ground providing food, clean water and sanitation.
+<p>
+  According to the World Bank, 736 million people live in extreme poverty, surviving on less than $1.90<Super content="http://povertydata.worldbank.org/poverty/home/">1</Super>, and with no hope of acquiring the assets that would lead to financial inclusion and a voice in decisions about their own future.
 
-   National Graphic reports on the devastating effects of pollution on our environment, including water contamination and air pollution caused by burning fossil fuels.
+</p>
 
-1. Lack of Consciousness of Worldwide Suffering
+   Oxfam reports that millions of people are facing starvation across East Africa, South Sudan and Yemen. Oxfam is on the ground providing food, clean water and sanitation.[[2][2]]
+
+   National Graphic reports on the devastating effects of pollution on our environment, including water contamination and air pollution caused by burning fossil fuels[[3][3]].
+
+#### 2. Lack of Consciousness of Worldwide Suffering
 
    Most people lack consciousness of the magnitude and scope of suffering across the globe.
    There is denial over the needs for climate rehabilitation, to assist refugees, growing suicidal tendencies among youth and the horrors of war.
 
    The majority of us turn away when there is discussion about the plight of others…we literally switch off when television channels try to show the extent of human misery.
 
-1. Inadequate Funding for Innovative Solutions
+#### 3. Inadequate Funding for Innovative Solutions
 
    Some entrepreneurs and corporations are conscious of the extent of human need, but haven’t found a way of earning the profit shareholders expect while investing in conscious capitalism.
 
@@ -95,7 +101,7 @@ There are four dimensions to the problem that CCF is targeting.
 
    However, they often don’t have the financial resources to solve the challenges, and don’t know how to access funds.
 
-1. Investors are Not Connected to the Innovators
+#### 4. Investors are Not Connected to the Innovators
 
    Many investors have not been introduced to the philosophy of conscious capitalism and don’t understand the positive impact that funding can have on global challenges.
 
@@ -355,3 +361,6 @@ export const tableOfContents = graphql`
     }
   }
 `;
+
+[2]: https://www.oxfam.org/en/emergencies/famine-and-hunger-crisis
+[3]: https://www.nationalgeographic.org/encyclopedia/pollution/

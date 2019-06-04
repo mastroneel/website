@@ -64,6 +64,13 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: 400,
+              className: 'anchor-link',
+            },
+          },
         ],
         defaultLayouts: {
           layout: require.resolve(`./src/templates/page.js`),

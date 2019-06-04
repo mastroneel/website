@@ -63,6 +63,18 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${ props => props.theme.color.pink };
         width: 30%;
         height: 4px;
+      }
+    }
+  }
+
+  .sticky-outer-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
     }
   }
 `

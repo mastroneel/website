@@ -146,7 +146,7 @@ const Values = () => {
             >
               <Cycle
                 dir="left"
-                onClick={() => cycle('next')}
+                onClick={() => cycle('back')}
               >
                 ⯇
               </Cycle>
@@ -161,7 +161,7 @@ const Values = () => {
               </TextBody>
               <Cycle
                 dir="right"
-                onClick={() => cycle('back')}
+                onClick={() => cycle('next')}
               >
                 ⯈
               </Cycle>

@@ -18,6 +18,26 @@ const Article = styled.article`
     ${ Underline }
   }
 
+  h2,
+  h3,
+  h4 {
+    line-height: 1.4;
+    position: relative;
+
+    a.anchor-link {
+      position: absolute;
+      left: -28px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    :hover {
+      a.anchor-link {
+        opacity: 1;
+      }
+    }
+  }
+
   @media (${ devices.tablet }) {
     padding: 0.7em 1.5em;
   }

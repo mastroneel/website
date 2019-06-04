@@ -5,33 +5,37 @@ subtitle: "Our Thoughts"
 imageSource: "philosophy"
 ---
 
+import { useStaticQuery, graphql } from "gatsby";
 import { rgba } from "polished";
 import { Wrapper, Container, Row } from "../components/ui/Grid";
 import Article, { Separator } from "../components/ui/Article";
 import theme from "../theme";
 import Values from "../components/sections/Values";
+import TOC from "../components/sections/TableOfContents";
+import Sticky from "react-stickynode";
 
 <Separator />
 <Container size="md">
 <Article>
+
 Conscious Capital Fund (CCF) grew out of the Conscious Thought Revolution (CTR) that was founded in 2014, when two successful entrepreneurs, Gordy Bal and Aaron Samsonoff, decided to pool their talents in order to focus on Conscious Capitalism,
 
 They made a commitment to raise consciousness of global challenges, and invest in companies who were offering solutions.
 
-After attracting other like-minded innovators, the group evolved into a team dedicated to building a venture capital fund focusing on conscious capitalism. 
+After attracting other like-minded innovators, the group evolved into a team dedicated to building a venture capital fund focusing on conscious capitalism.
 
 CCF was launched in 2018. It’s attracting the interest of investors who want to put their capital to work solving worldwide poverty, famine, hunger, environmental disasters and the suffering caused by war.
 
-The CCF philosophy underpins a belief that connecting impact investors with companies who are committed to conscious capitalism will help to resolve the world’s problems. The roots of our philosophy are:	
+The CCF philosophy underpins a belief that connecting impact investors with companies who are committed to conscious capitalism will help to resolve the world’s problems. The roots of our philosophy are:
 
 1. CTR VALUES AND PRINCIPLES
-1. THE PROBLEM WE CAN RESOLVE
-1. OUR BELIEF THAT CCF OFFERS A SOLUTION
-1. THE CCF VISION AND MISSION
-1. HOW THAT VISION AFFECTS OUR EXECUTION
-1. WHAT WE MEAN BY PROXIMITY			
-1. WHY WE BELIEVE IN THE TRIPLE ROI
-1. OUR COMMITMENT TO BUILDING A COMMUNITY
+2. THE PROBLEM WE CAN RESOLVE
+3. OUR BELIEF THAT CCF OFFERS A SOLUTION
+4. THE CCF VISION AND MISSION
+5. HOW THAT VISION AFFECTS OUR EXECUTION
+6. WHAT WE MEAN BY PROXIMITY
+7. WHY WE BELIEVE IN THE TRIPLE ROI
+8. OUR COMMITMENT TO BUILDING A COMMUNITY
 
 </Article>
 </Container>
@@ -40,7 +44,7 @@ The CCF philosophy underpins a belief that connecting impact investors with comp
 <Article>
 Our parent organization, CTR is value-driven, and those values and principles guide our CCF initiatives:
 
-Integrity         Social Responsibility      Ethical Behaviour    Accountability
+Integrity Social Responsibility Ethical Behaviour Accountability
 
 As we work with companies who are committed to conscious capitalism, these are our guiding principles:
 
@@ -48,56 +52,63 @@ As we work with companies who are committed to conscious capitalism, these are o
 - Socially-responsible investment
 - Entrepreneurship
 - Win-Win
-- Sustainable Development Goals 
+- Sustainable Development Goals
 
 </Article>
 </Container>
+<Sticky
+  innerZ={900}
+  top={80}
+  bottomBoundary='#footer'
+>
+  <TOC data={() => useStaticQuery(tableOfContents)} />
+</Sticky>
 
 ![Network Effect](../images/philosophy/network_effect.png)
 
 <Container size="md">
-<Article>
+<Article id="the-problem-that-ccf-can-resolve">
 
-## The problem that CCF can resolve…
+## The Problem That CCF Can Resolve
 
 There are four dimensions to the problem that CCF is targeting.
 
 1. Global Challenges Exist
 
-	According to the World Bank, 736 million people live in extreme poverty, surviving on less than $1.90 a day, and with no hope of acquiring the assets that would lead to financial inclusion and a voice in decisions about their own future.
-	Oxfam reports that millions of people are facing starvation across East Africa, South Sudan and Yemen. Oxfam is on the ground providing food, clean water and sanitation.
+   According to the World Bank, 736 million people live in extreme poverty, surviving on less than \$1.90 a day, and with no hope of acquiring the assets that would lead to financial inclusion and a voice in decisions about their own future.
+   Oxfam reports that millions of people are facing starvation across East Africa, South Sudan and Yemen. Oxfam is on the ground providing food, clean water and sanitation.
 
-	National Graphic reports on the devastating effects of pollution on our environment, including water contamination and air pollution caused by burning fossil fuels. 
+   National Graphic reports on the devastating effects of pollution on our environment, including water contamination and air pollution caused by burning fossil fuels.
 
 1. Lack of Consciousness of Worldwide Suffering
 
-	Most people lack consciousness of the magnitude and scope of suffering across the globe.
-	There is denial over the needs for climate rehabilitation, to assist refugees, growing suicidal tendencies among youth and the horrors of war.
+   Most people lack consciousness of the magnitude and scope of suffering across the globe.
+   There is denial over the needs for climate rehabilitation, to assist refugees, growing suicidal tendencies among youth and the horrors of war.
 
-	The majority of us turn away when there is discussion about the plight of others…we literally switch off when television channels try to show the extent of human misery. 
+   The majority of us turn away when there is discussion about the plight of others…we literally switch off when television channels try to show the extent of human misery.
 
 1. Inadequate Funding for Innovative Solutions
 
-	Some entrepreneurs and corporations are conscious of the extent of human need, but haven’t found a way of earning the profit shareholders expect while investing in conscious capitalism.
+   Some entrepreneurs and corporations are conscious of the extent of human need, but haven’t found a way of earning the profit shareholders expect while investing in conscious capitalism.
 
-	They have solutions, and are willing and able to put their time and energy into making a difference.
+   They have solutions, and are willing and able to put their time and energy into making a difference.
 
-	However, they often don’t have the financial resources to solve the challenges, and don’t know how to access funds.
+   However, they often don’t have the financial resources to solve the challenges, and don’t know how to access funds.
 
 1. Investors are Not Connected to the Innovators
 
-	Many investors have not been introduced to the philosophy of conscious capitalism and don’t understand the positive impact that funding can have on global challenges.  
+   Many investors have not been introduced to the philosophy of conscious capitalism and don’t understand the positive impact that funding can have on global challenges.
 
-	Impact investors need help in finding conscious capital organizations in which to invest.
+   Impact investors need help in finding conscious capital organizations in which to invest.
 
-	Investors may not be familiar with the fact that profit is one of the pillars of conscious capital investing, and there is significant ROI.
+   Investors may not be familiar with the fact that profit is one of the pillars of conscious capital investing, and there is significant ROI.
 
 </Article>
 </Container>
 
 <Wrapper bgColor={rgba(theme.color.grey, 0.04)}>
 <Container size="md">
-<Article bgColor={rgba(theme.color.grey, 0.005)}>
+<Article id="the-ccf-solution" bgColor={rgba(theme.color.grey, 0.005)}>
 
 ## The CCF Solution
 
@@ -109,35 +120,35 @@ The CCF is one of those “thoughtful, committed groups”, and we are determine
 
 1. Global Challenges Exist – The CCF Solution
 
-	The CCF team recognizes that there are many global challenges and we are committed to making a difference.
+   The CCF team recognizes that there are many global challenges and we are committed to making a difference.
 
-	Using second order thinking that helps us look at things in a different way, CCF is studying the causes of war, poverty, famine and disease in a way the ensures our strategies are informed. 
+   Using second order thinking that helps us look at things in a different way, CCF is studying the causes of war, poverty, famine and disease in a way the ensures our strategies are informed.
 
-	We are seeking to connect ethical, impact investors with creative innovators whose consciousness of the issues is leading them towards answers.
+   We are seeking to connect ethical, impact investors with creative innovators whose consciousness of the issues is leading them towards answers.
 
 1. Lack of Consciousness of Worldwide Suffering – The CCF Solution
 
-	While others turn away, our CCF group does not. We move towards the issues, rather than distancing ourselves, as others do.
-	The CCF team is devoting time and effort to raising our own consciousness of global challenges, so that we can help others become more aware.
+   While others turn away, our CCF group does not. We move towards the issues, rather than distancing ourselves, as others do.
+   The CCF team is devoting time and effort to raising our own consciousness of global challenges, so that we can help others become more aware.
 
-	We are thinking ahead, with a 50-year plan to raise consciousness to a point where investors are interacting directly with innovators in humanity’s best interests. 
+   We are thinking ahead, with a 50-year plan to raise consciousness to a point where investors are interacting directly with innovators in humanity’s best interests.
 
 1. Inadequate Funding for Innovative Solutions – The CCF Solution
 
-	CCF is working to convince investors, who have the best of intentions, but who feel they have to comply with shareholder demand for profits, that companies who focus on conscious capitalism are shown to produce higher-than-average returns on investment. 
+   CCF is working to convince investors, who have the best of intentions, but who feel they have to comply with shareholder demand for profits, that companies who focus on conscious capitalism are shown to produce higher-than-average returns on investment.
 
-	The CCF team is actively seeking out individual investors, by highlighting the commitment and expertise of the CCF leadership, and providing assurances that there will be secure and conscious stewardship of their capital.
-	CCF is attracting investors by increasing consciousness of worldwide challenges and making investors aware of the opportunity to achieve positive change.
+   The CCF team is actively seeking out individual investors, by highlighting the commitment and expertise of the CCF leadership, and providing assurances that there will be secure and conscious stewardship of their capital.
+   CCF is attracting investors by increasing consciousness of worldwide challenges and making investors aware of the opportunity to achieve positive change.
 
 1. Investors are Not Connected to the Innovators – The CCF Solution
 
-	CCF is searching for companies who need funding for innovation, and connecting them with investors who are becoming more conscious of the global challenges.
+   CCF is searching for companies who need funding for innovation, and connecting them with investors who are becoming more conscious of the global challenges.
 
-	Portfolio companies have the shoulders of giants to stand on, and unprecedented access to the talent and skills of the CCF team.
+   Portfolio companies have the shoulders of giants to stand on, and unprecedented access to the talent and skills of the CCF team.
 
-	As the CCF network of investors and innovators grows, we will be able to use warm connections to cement productive partnerships.
+   As the CCF network of investors and innovators grows, we will be able to use warm connections to cement productive partnerships.
 
-	We are motivated by passion and purpose to see a transformed world and we are looking for the potential to impact a billion lives or more. The CCF team has a proven ability to execute, with a strong track record based on measurable results. We hold a futurist perspective because we have shown that we can read between the lines and find success where others only see barriers. The cause is compelling our network to grow and include more.We are using the synergies created by conscious capitalism to drive a cultural shift.
+   We are motivated by passion and purpose to see a transformed world and we are looking for the potential to impact a billion lives or more. The CCF team has a proven ability to execute, with a strong track record based on measurable results. We hold a futurist perspective because we have shown that we can read between the lines and find success where others only see barriers. The cause is compelling our network to grow and include more.We are using the synergies created by conscious capitalism to drive a cultural shift.
 
 </Article>
 </Container>
@@ -146,17 +157,18 @@ The CCF is one of those “thoughtful, committed groups”, and we are determine
 ![Double RIO](../images/philosophy/double_roi.jpg)
 
 <Container size="md">
-<Article>
+<Article id="ccf-vision-and-mission">
 
 ## CCF Vision and Mission
-Our vision is a community of socially-responsible, impact investors who: 
+
+Our vision is a community of socially-responsible, impact investors who:
 
 - are committed to consciousness of the human condition
 - fund innovators who are addressing worldwide problems
 - benefit from a triple bottom line that ensures profit by investing in people and the planet.
 - help to ensure a kinder, healthier, more secure population, that thrives in an equitable, sustainable and nurturing global environment
-- participate in a network of like-minded investors to exchange ideas 
-  
+- participate in a network of like-minded investors to exchange ideas
+
 The mission for CCF is to build a venture capital fund that will support a flourishing eco-system of entrepreneurs, innovators and investors who are committed to raising consciousness of the human condition, in order to effect change.
 
 We are vision- and mission-focused and destined to execute, in order to address all the dimensions of the problem.
@@ -167,34 +179,34 @@ We are vision- and mission-focused and destined to execute, in order to address 
 ![Hudson Bay](../images/philosophy/view.jpg)
 
 <Container size="md">
-<Article>
+<Article id="how-the-ccf-vision-affects-execution">
 
 ## How the CCF Vision Affects Execution
 
-We have a brand, a vision, a cause –  and people on all sides of the spectrum want to be a part of CCF. Without even having to introduce ourselves we have strangers lining up to join the cause.
+We have a brand, a vision, a cause – and people on all sides of the spectrum want to be a part of CCF. Without even having to introduce ourselves we have strangers lining up to join the cause.
 
-It’s not just numbers and percentages to us, it’s about unlocking the hidden value possessed by the founders and businesses we include in our portfolio. 
+It’s not just numbers and percentages to us, it’s about unlocking the hidden value possessed by the founders and businesses we include in our portfolio.
 
 We choose to invest in them in order to go beyond what is imaginable today.
 
 ### Investment is De-risked in the CCF Execution Strategy
 
-As part of our execution, we mitigate negating factors or obstacles facing companies that are in the CCF portfolio, to help them overcome barriers to our mutual success. 
+As part of our execution, we mitigate negating factors or obstacles facing companies that are in the CCF portfolio, to help them overcome barriers to our mutual success.
 
 A key aspect to the de-risking is the fact that deals are often vetted cursorily, prior to the funds due diligence process, through the members and mechanisms of the Conscious Capital network. The network itself allows for continued integration and development of each business.
- 
+
 During our screening process for de-risking we look for companies which have the following characteristics:
 
-- A founding team of executors (typically 3, more than 1, no more than 4) with a previous history/track record of success, with a well rounded set of skills, members that symbiotically compliment each others weaknesses with their own talents and areas of executionairy expertise 
-- A collection of advisors that suitably are capable of assisting the team in the growing pains of transitioning a business from the mode and mentality of starting up 
+- A founding team of executors (typically 3, more than 1, no more than 4) with a previous history/track record of success, with a well rounded set of skills, members that symbiotically compliment each others weaknesses with their own talents and areas of executionairy expertise
+- A collection of advisors that suitably are capable of assisting the team in the growing pains of transitioning a business from the mode and mentality of starting up
 - A product or service that measurably solves a truly painful problem in an exponentially superior fashion, versus an incremental improvement of an annoyance the targeted customer has
-- A well thought out business model, with a path and plan for growth, detailing how they will market their product/service, an explanation of the opportunities size, scale, magnitude, and timing, including their future imagined.  
-- Existing in a market with competitors who have an attractive valuation or exit potential, but lack the unique value proposition that our portfolio company has, with enough differentiation and defensibility to attract and retain a large percentage of market share 
+- A well thought out business model, with a path and plan for growth, detailing how they will market their product/service, an explanation of the opportunities size, scale, magnitude, and timing, including their future imagined.
+- Existing in a market with competitors who have an attractive valuation or exit potential, but lack the unique value proposition that our portfolio company has, with enough differentiation and defensibility to attract and retain a large percentage of market share
 - In possession of or the ability to manufacture catalysts for valuation growth, for example innovative technology.
 
-We actively look to fuel our own feedback loops, leveraging frameworks such as GRI Reporting Standards and the IRIS metrics. 
+We actively look to fuel our own feedback loops, leveraging frameworks such as GRI Reporting Standards and the IRIS metrics.
 
-By measuring our current impact we can utilize historic and current data gathered, to further our portfolio’s reach and improve each company’s ability to further service the mission of expanding consciousness. 
+By measuring our current impact we can utilize historic and current data gathered, to further our portfolio’s reach and improve each company’s ability to further service the mission of expanding consciousness.
 
 Our portfolio companies are able to assess their own content, services, products and experiences to improve how investment impact is measured. This results in a risk-adjusted return, where the risk is lower and the returns and impact are higher.
 
@@ -204,29 +216,29 @@ Our portfolio companies are able to assess their own content, services, products
 ![Double RIO](../images/philosophy/community.jpg)
 
 <Container size="md">
-<Article>
+<Article id="what-we-mean-by-proximity">
 
 ## What We Mean by Proximity
 
 ### Our network gives us access to opportunities
 
-We are well-connected with a diverse network of influencers, businesses and investors who are open to opportunities at an earlier stage of development. 
+We are well-connected with a diverse network of influencers, businesses and investors who are open to opportunities at an earlier stage of development.
 
-As these connections and relationships grow, we are very confident that CCF will be seen as a leader in the Conscious Capital space. 
- 
-We have important momentum in the Venture Capital and Investments sector, with the growing awareness of global influence, the ripple effects of multinational business decisions, and a focus on expanding consciousness. More so now than ever the timing is right, people crave for change to be affected. 
+As these connections and relationships grow, we are very confident that CCF will be seen as a leader in the Conscious Capital space.
 
-In the population where $68T is changing generational hands, where the world view is being opened up and the state of the human condition is being exposed to these new investors, we’ve seen a shift in the desire to leave a legacy of impact, beyond just an inheritance. 
+We have important momentum in the Venture Capital and Investments sector, with the growing awareness of global influence, the ripple effects of multinational business decisions, and a focus on expanding consciousness. More so now than ever the timing is right, people crave for change to be affected.
+
+In the population where \$68T is changing generational hands, where the world view is being opened up and the state of the human condition is being exposed to these new investors, we’ve seen a shift in the desire to leave a legacy of impact, beyond just an inheritance.
 
 Given the mindset of these enlightened investors, our approach is to pursue opportunities aligned with Conscious Capital (and Conscious Capitalism) to make an impact and reshape the world for a better future.
- 
-Misaligned missions and purposes are non-starters with the “new conscious” companies.  These companies want to “Do Good” and experience what results from that.  
+
+Misaligned missions and purposes are non-starters with the “new conscious” companies. These companies want to “Do Good” and experience what results from that.
 
 “Conscious companies treat their stakeholders better. As a consequence, their suppliers are happier to do business with them. Employees are more engaged, productive, and likely to stay. These companies are more welcome in their communities and their customers are more satisfied and loyal. The most conscious companies give more, and they get more in return. The inescapable conclusion: “It pays to care, widely and deeply.”
 
-CCF aims to align the capital directly with the vision, mission and purpose of each company in which we invest. In this way, we create a symbiotic, advantageous relationship our investors and investees find more than enticing. Conscious companies and investors resonate with the vision of CCF. 
+CCF aims to align the capital directly with the vision, mission and purpose of each company in which we invest. In this way, we create a symbiotic, advantageous relationship our investors and investees find more than enticing. Conscious companies and investors resonate with the vision of CCF.
 
-### Access and proximity give us the advantage of better terms.	 
+### Access and proximity give us the advantage of better terms.
 
 We’re able to get into the investment opportunity sooner than other funds because we have warm market connections. We are prepared to execute quickly with our developed methods of discerning decisions from our proprietary and thorough – yet expedited – due diligence techniques.
 
@@ -234,10 +246,9 @@ This results in an earlier stage investment, typically at a lower valuation with
 
 ### We’re there sooner, more aligned and bring more than just money to the table.
 
-As the status of the VC fund rises and we show better results, we receive increasingly favorable terms all due to the result from the network effect. 
+As the status of the VC fund rises and we show better results, we receive increasingly favorable terms all due to the result from the network effect.
 
 We also provide companies that form the portfolio of CCF with a utility marriage to help them solve their problems.
-	 
 However, Venture Capital and investing is more than a marriage. You cannot fire your VC, so selecting who makes investments and who you make investments in cannot be understated.
 
 With our focus and continued support, CCF founders understand that our alignment and goals will never conflict with our investors. To the contrary, our continued efforts to push forward with a vision compatible with theirs creates an expanded consciousness.
@@ -248,9 +259,9 @@ The alignment with the intention that there is more to be achieved beyond profit
 </Container>
 
 <Container size="md">
-<Article>
+<Article id="why-we-believe-in-the-triple-bottom-line">
 
-## Why we believe in the Triple Bottom Line
+## Why We Believe in the Triple Bottom Line
 
 People.
 
@@ -270,7 +281,7 @@ ROI isn’t just Return on Investment, but also Return on Impact.
 
 With a focus on people we believe with an established baseline metrics you can get a real sense of the DNA of the company, a few examples would include Sexual Harassment Policy, Anti-Discrimination Policy, Diverse Representation Policy with attention to Charitable Practices and Social Impact Objectives. This is by no means restrictive to just the employees so for customers we ensure that the companies have Client Protection Policy, Client Feedback System and Client Complaint Tracking System. As well for any of our investments we track and monitor Percent Female Ownership, Percent Minority/Previously Excluded Ownership, Gender Wage Equity, Women’s Career Advancement Initiative, Fair Dismissal Policy and Fair Hiring/Recruiting Policy. And to ensure compliance with a Forced Labor Policy.
 
-If you want to explore some of our metrics with more detail you can visit this link for more information. 
+If you want to explore some of our metrics with more detail you can visit this link for more information.
 
 ### Planet
 
@@ -280,7 +291,7 @@ If you want to explore some of our metrics with more detail you can visit this l
 
 ### Profit
 
-Conscious Capitalism yields better results.  
+Conscious Capitalism yields better results.
 
 According to a Harvard Business Review article, companies that practice Conscious Capitalism produce 10x better results.
 
@@ -304,25 +315,25 @@ This results in creating accountability and transparency which are foundational 
 </Container>
 
 <Container size="md">
-<Article>
+<Article id="our-commitment-to-building-a-conscious-capital-community">
 
 ## Our Commitment to Building a Conscious Capital Community
 
-Our parent company, CTR Capital, is building a community that will include annual events, online sessions with guest speakers, forums and connections, an educational platform, as well as a myriad other things which supplement a community and allow it to flourish. 
+Our parent company, CTR Capital, is building a community that will include annual events, online sessions with guest speakers, forums and connections, an educational platform, as well as a myriad other things which supplement a community and allow it to flourish.
 
 The community will support both sides: the limited partners investing or interested in investing, as well as the founders and companies we invest into, but we intend on extending invitations out to curated guests as well as the unknown.
- 
-The community will open the doors for investors to get access to a much larger network of individuals looking to impact the world. 
 
-As well, it will provide the opportunity to pool capital together with other individuals looking to make an impact in the world. 
+The community will open the doors for investors to get access to a much larger network of individuals looking to impact the world.
 
-A struggle for the generational wealth changing hands, is that those investors want to make impact a focus without giving up yield, but there are few opportunities or mentors to direct it. 
+As well, it will provide the opportunity to pool capital together with other individuals looking to make an impact in the world.
+
+A struggle for the generational wealth changing hands, is that those investors want to make impact a focus without giving up yield, but there are few opportunities or mentors to direct it.
 
 Often for those interested in investing in conscious companies there aren’t enough deals available out there. In many cases the requirements to assess and curate is just not feasible unless it’s a full-time endeavor.
- 
-This opens the doors for CTR to exist as a pre-eminent authority in the Conscious Capital space, which would allow people seeking out the impact with their capital or skills to have a community where the troubles are handled and the framework is set. 
 
-Our goal is to foster a thriving community of companies and individuals who are looking to create the impact and live fulfilled, understanding that the problems we face today often need a new solution. 
+This opens the doors for CTR to exist as a pre-eminent authority in the Conscious Capital space, which would allow people seeking out the impact with their capital or skills to have a community where the troubles are handled and the framework is set.
+
+Our goal is to foster a thriving community of companies and individuals who are looking to create the impact and live fulfilled, understanding that the problems we face today often need a new solution.
 
 This will provide an opportunity for limited partners and companies to share super powers, whether it be capital or skill, with a larger community.
 
@@ -330,3 +341,17 @@ If you would like further information about CCF, please contact us.
 
 </Article>
 </Container>
+
+<div id='footer' />
+
+export const tableOfContents = graphql`
+  query {
+    table: allMdx(filter: { frontmatter: { title: { eq: "Philosophy" } } }) {
+      edges {
+        node {
+          tableOfContents
+        }
+      }
+    }
+  }
+`;

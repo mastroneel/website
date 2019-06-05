@@ -6,6 +6,8 @@ import { Container, Row, Column } from '../ui/Grid'
 import Polygon, { PolygonLight } from './Polygon'
 import Heading from '../ui/Heading'
 import { TextBody } from '../PageIntro'
+import ChevronLeft from '../../images/chevron-left-fill.svg'
+import ChevronRight from '../../images/chevron-right-fill.svg'
 
 const Content = [
   {
@@ -71,6 +73,9 @@ const Cycle = styled.button`
   color: #fff;
   width: 42px;
   height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 30px;
   appearance: none;
   position: absolute;
@@ -86,6 +91,11 @@ const Cycle = styled.button`
   :hover {
     background-color: ${ props => lighten(0.12, props.theme.color.pink) };
   }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
 `
 
 const Values = () => {
@@ -99,7 +109,7 @@ const Values = () => {
     setIsVisible(idx => {
       switch (dir) {
       case 'next':
-        if (idx > 5) return idx
+        if (idx > 6) return idx
         return idx + 1
       case 'back':
         if (idx <= 0) return idx
@@ -148,7 +158,10 @@ const Values = () => {
                 dir="left"
                 onClick={() => cycle('back')}
               >
-                ⯇
+                <img
+                  src={ChevronLeft}
+                  alt="Cycle back"
+                />
               </Cycle>
               <TextBody>
                 <Heading
@@ -163,7 +176,10 @@ const Values = () => {
                 dir="right"
                 onClick={() => cycle('next')}
               >
-                ⯈
+                <img
+                  src={ChevronRight}
+                  alt="Cycle forward"
+                />
               </Cycle>
             </ContentOuter>
           ))}

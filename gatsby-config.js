@@ -138,5 +138,11 @@ module.exports = {
         dataLayerName: 'GTM-MQNKZBH',
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://capital.us20.list-manage.com/subscribe/post?u=d9334738aae0dbbf985cec350&amp;id=d1125285d4',
+      },
+    },
   ],
 }

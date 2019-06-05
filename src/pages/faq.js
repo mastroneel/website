@@ -128,6 +128,7 @@ export const allPages = graphql`
           faq {
             q
             a
+            d
           }
         }
       }

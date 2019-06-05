@@ -40,10 +40,47 @@ const Article = styled.article`
 
   a {
     color: ${ props => props.theme.color.pink };
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: ${ props => props.theme.color.pink };
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    :hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
 
   @media (${ devices.tablet }) {
     padding: 0.7em 1.5em;
+  }
+
+  blockquote {
+    font-size: 2.8rem;
+    position: relative;
+
+    ::before {
+      content: '';
+      border-left: 4px solid pink;
+      position: absolute;
+      top: 0;
+      left: -1.5em;
+      border-left: 4px solid ${ props => props.theme.color.pink };
+      height: 100%;
+    }
   }
 `
 

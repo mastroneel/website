@@ -24,17 +24,18 @@ const Body = styled.span`
 `
 
 const Content = styled.span`
-  max-width: 240px;
+  width: 240px;
   position: absolute;
   top: -100%;
   left: 50%;
   transform: translate(-50%, -100%);
-  padding: 0.3em 0.7em;
+  padding: 0.6em 1em;
   background-color: ${ props => props.theme.color.dark };
   color: #fff;
   font-size: 1.4rem;
   box-shadow: 0 4px 10px ${ props => rgba(props.theme.color.dark, 0.12) };
   border-radius: 8px;
+  overflow-wrap: break-word;
   visibility: ${ props => (props.active ? 'visible' : 'hidden') };
   opacity: ${ props => (props.active ? '1' : '0') };
   transition: opacity 0.25s ease;
@@ -50,14 +51,29 @@ const Content = styled.span`
     border-right-color: transparent;
     border-left-color: transparent;
   }
+
+  a {
+    text-decoration: none;
+    display: inline;
+
+    ::after {
+      display: none;
+    }
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
 `
 
-const Super = ({ content, children }) => {
+const Super = ({ href, content, children }) => {
   const [isActive, setIsActive] = useState(false)
   return (
     <Body>
       <strong onClick={() => setIsActive(!isActive)}>{children}</strong>
-      <Content active={isActive}>{content}</Content>
+      <Content active={isActive}>
+        {href ? <a href={content}>{content}</a> : <span dangerouslySetInnerHTML={{ __html: content }} />}
+      </Content>
     </Body>
   )
 }

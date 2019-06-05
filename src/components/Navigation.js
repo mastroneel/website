@@ -197,7 +197,7 @@ class Navigation extends Component {
           <Button
             as="a"
             appearance="primary"
-            href="mailto:fund@ctr.capital"
+            href="mailto:social@ctr.capital"
             alt="Get in touch"
             target="_blank"
           >

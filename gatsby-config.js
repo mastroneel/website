@@ -121,5 +121,22 @@ module.exports = {
         icon: `src/images/ctr-logo.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-128586738-1',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: 'GTM-MQNKZBH',
+        includeInDevelopment: false,
+        // Specify optional GTM environment details.
+        gtmAuth: 'ryZWMYNq_FGo_YbcgchEXg',
+        gtmPreview: 'env-2',
+        dataLayerName: 'GTM-MQNKZBH',
+      },
+    },
   ],
 }

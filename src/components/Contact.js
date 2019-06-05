@@ -64,6 +64,7 @@ const Contact = () => (
                 <InputGroup>
                   <label htmlFor="name">Name</label>
                   <input
+                    required
                     type="text"
                     name="name"
                     placeholder="Your Name"
@@ -77,6 +78,7 @@ const Contact = () => (
                 <InputGroup>
                   <label htmlFor="email">Email Address</label>
                   <input
+                    required
                     type="email"
                     name="email"
                     placeholder="your.name@email.com"
@@ -89,6 +91,7 @@ const Contact = () => (
                 <InputGroup>
                   <label htmlFor="message">Leave a Message</label>
                   <textarea
+                    required
                     name="message"
                     rows="6"
                     placeholder="We will get back to you as soon as possible"

@@ -36,9 +36,9 @@ const Contact = () => (
           <form
             name="contact"
             method="POST"
-            data-netlify-recaptcha="true"
             data-netlify="true"
             action="/success/"
+            netlify-honeypot="bot-field"
             css={`
               margin-right: 2em;
 
@@ -52,6 +52,15 @@ const Contact = () => (
               style={{ marginBottom: '2em' }}
             >
               <Column>
+                <div
+                  css={`
+                    display: none;
+                  `}
+                >
+                  <label>
+                    <input name="bot-field" />
+                  </label>
+                </div>
                 <InputGroup>
                   <label htmlFor="name">Name</label>
                   <input

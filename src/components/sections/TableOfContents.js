@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
 import { rgba } from 'polished'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Scrollspy from 'react-scrollspy'
@@ -52,9 +53,13 @@ const DIR = {
   BACK: 'back',
 }
 
-const TOC = ({ data, ...rest }) => {
-  const { items: entries } = data().table.edges[0].node.tableOfContents
+const TOC = () => {
   const [linkIdx, setLinkIdx] = useState(1)
+  const {
+    table: {
+      tableOfContents: { items: entries },
+    },
+  } = useStaticQuery(tableOfContents)
 
   function cycleSection (dir) {
     setLinkIdx(prev => {
@@ -103,7 +108,7 @@ const TOC = ({ data, ...rest }) => {
   }
 
   return (
-    <TableCont {...rest}>
+    <TableCont>
       {cycleButton(linkIdx, DIR.BACK)}
       <Scrollspy
         items={entries.map(entry => entry.url.substr(1))}
@@ -118,5 +123,13 @@ const TOC = ({ data, ...rest }) => {
     </TableCont>
   )
 }
+
+export const tableOfContents = graphql`
+  query {
+    table: mdx(frontmatter: { title: { eq: "Philosophy" } }) {
+      tableOfContents
+    }
+  }
+`
 
 export default TOC

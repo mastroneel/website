@@ -71,12 +71,20 @@ module.exports = {
               className: 'anchor-link',
             },
           },
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: '_self',
+              rel: 'nofollow',
+            },
+          },
         ],
         defaultLayouts: {
           layout: require.resolve(`./src/templates/page.js`),
         },
       },
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     {

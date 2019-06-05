@@ -38,6 +38,7 @@ const Contact = () => (
             method="POST"
             data-netlify-recaptcha="true"
             data-netlify="true"
+            action="/success/"
             css={`
               margin-right: 2em;
 

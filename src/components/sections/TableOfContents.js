@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { rgba } from 'polished'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Scrollspy from 'react-scrollspy'
+import arrowLeft from '../../images/arrow-left.svg'
+import arrowRight from '../../images/arrow-right.svg'
 
 const TableCont = styled.div`
   position: relative;
@@ -45,6 +47,11 @@ const CycleLink = styled(AnchorLink)`
 
   :hover {
     opacity: 0.7;
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
   }
 `
 
@@ -97,12 +104,19 @@ const TOC = () => {
   }
 
   function cycleButton (idx, dir) {
+    function buildArrow (src) {
+      return <img
+        src={src}
+        alt="Cycle button"
+      />
+    }
+
     return (
       <CycleLink
         href={getUrl(idx, dir)}
         onClick={() => cycleSection(dir)}
       >
-        {dir === DIR.BACK ? '←' : '→'}
+        {dir === DIR.BACK ? buildArrow(arrowLeft) : buildArrow(arrowRight)}
       </CycleLink>
     )
   }

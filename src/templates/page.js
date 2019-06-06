@@ -20,6 +20,7 @@ export default ({ children, pageContext }) => {
     <>
       <SEO
         title={frontmatter.title}
+        description={frontmatter.description}
       />
       <PageIntro
         small={frontmatter.subtitle}

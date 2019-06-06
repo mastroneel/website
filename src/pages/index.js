@@ -155,7 +155,11 @@ const Index = ({ data }) => {
     <>
       <SEO
         title="Home"
-        keywords={[`gatsby`, `application`, `react`]}
+        keywords={[
+          `CTR`, `CTR Capital`, `CTR Venture Capital`, `Conscious Thought Revolution Venture Capital`,
+          `Conscious Thought Revolution Capital`, `ctr.capital`, `Conscious Capital`,
+          `Venture Capital raising human consciousness`, `social impact investing`, `impact investment fund`,
+          `VC improving the world`, `How to invest in impact fund`]}
       />
       <Container
         css={`

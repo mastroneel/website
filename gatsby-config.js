@@ -3,7 +3,7 @@ module.exports = {
     title: 'CTR Capital',
     author: 'Tamas Kertesz',
     description:
-      'CTR Capital - A community of socially-responsible, impact investors who fund initiatives that raise human consciousness, generating Return on Investment and Return on Impact a result called “Double ROI”.',
+      'CTR Capital - A community of socially-responsible, impact investors who fund initiatives that raise human consciousness, focused on returns through the Triple Bottom Line; People, Planet, Profit.',
   },
   plugins: [
     {

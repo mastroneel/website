@@ -18,7 +18,9 @@ export default ({ children, pageContext }) => {
   }
   return (
     <>
-      <SEO title={frontmatter.title} />
+      <SEO
+        title={frontmatter.title}
+      />
       <PageIntro
         small={frontmatter.subtitle}
         heading={frontmatter.title}

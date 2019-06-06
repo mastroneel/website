@@ -158,7 +158,7 @@ export default ({ data }) => {
     <>
       <SEO
         title="Our Team"
-        description="With decades of experience in the world of startups and private placements"
+        description="With decades of experience in the world of startups and private placements."
       />
       <PageIntro
         small="Our Rockstars"

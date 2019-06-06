@@ -1,6 +1,6 @@
 ---
 name: "Aaron Samsonoff"
-title: "Co-Founder, Managing Partner"
+title: "General Partner, Co-Founder"
 image: aaron_samsonoff.jpg
 avatar: avatar.jpg
 social:

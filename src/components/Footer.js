@@ -10,6 +10,7 @@ import theme, { devices } from '../theme'
 import FooterIll from '../images/footer_ill.svg'
 
 const FooterStyle = styled.footer`
+  margin-top: 2em;
   background-color: ${ props => props.theme.color.dark };
 `
 

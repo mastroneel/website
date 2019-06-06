@@ -47,6 +47,11 @@ const Contact = () => (
               }
             `}
           >
+            <input
+              type="hidden"
+              name="form-name"
+              value="contact"
+            />
             <Row
               grid={1 / 2}
               style={{ marginBottom: '2em' }}

@@ -105,7 +105,7 @@ export default ({ data }) => {
                     transitionTime={200}
                     easing="ease-in-out"
                   >
-                    <p>{qa.a}</p>
+                    <p dangerouslySetInnerHTML={{__html: qa.a}} />
                     <small>{qa.d}</small>
                   </Collapsible>
                 </FaqBody>

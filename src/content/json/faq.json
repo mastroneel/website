@@ -4,8 +4,8 @@
     "faq": [
       {
         "q": "Do you only invest in particular areas or industries?",
-        "a": "While the Conscious Capital Fund investments are based on its criteria and thesis, we do consider all opportunities. That being said we tend to focus on Transformative Technology and within that space, specific themes like Disruptive Health, Human Potential, Climate Rehabilitation, Fintech, Blockchain and Digital Assets. Please visit our [Companies page](https://ctr.capital/companies) to learn more.",
-        "d": "2019-06-10"
+        "a": "While the Conscious Capital Fund investments are based on its criteria and thesis, we do consider all opportunities. That being said we tend to focus on Transformative Technology and within that space, specific themes like Disruptive Health, Human Potential, Climate Rehabilitation, Fintech, Blockchain and Digital Assets. Please visit our <a href=\"https://ctr.capital/companies\">Companies page</a> to learn more.",
+        "d": "2019-06-11"
       },
       {
         "q": "How do you weigh different criteria in your decision-making process?",
@@ -29,8 +29,8 @@
       },
       {
         "q": "How do you get access to deals?",
-        "a": "Our Fund Managers utilize two main strategies. The first is passive: Having cultivated a network of investors and entrepreneurs who have their ear to the ground, they send us deals they have vetted through and believe meet the Fund’s thesis. The second strategy is active and aggressive: We passionately search physical and online avenues for founders and companies that are providing solutions to problems we see stone-walling the path of the Fund’s vision. Please visit our [Philosophy page](https://ctr.capital/philosophy) for more details",
-        "d": "2019-04-01"
+        "a": "Our Fund Managers utilize two main strategies. The first is passive: Having cultivated a network of investors and entrepreneurs who have their ear to the ground, they send us deals they have vetted through and believe meet the Fund’s thesis. The second strategy is active and aggressive: We passionately search physical and online avenues for founders and companies that are providing solutions to problems we see stone-walling the path of the Fund’s vision. Please visit our <a href=\"https://ctr.capital/philosophy\">Philosophy page</a> for more details",
+        "d": "2019-06-11"
       },
       {
         "q": "What skills and tactics are employed by the fund to ensure success?",
@@ -59,7 +59,7 @@
       },
       {
         "q": "How should I get in touch with you?",
-        "a": "[Contact us with the form](#footer), or email us directly social [at] ctr [dot] capital.",
+        "a": "<a href=\"#footer\">Contact us with the form</a>, or email us directly social [at] ctr [dot] capital.",
         "d": "2019-04-01"
       }
     ]
@@ -114,7 +114,7 @@
       },
       {
         "q": "What makes you different?",
-        "a": "For one our approach to what we’re trying to accomplish, the vision and mission. You can read more in our [Philosophy](https://ctr.capital/philosophy).",
+        "a": "For one our approach to what we’re trying to accomplish, the vision and mission. You can read more in our <a href=\"https://ctr.capital/philosophy\">Philosophy</a>.",
         "d": "2019-06-10"
       },
       {

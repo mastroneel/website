@@ -11,42 +11,42 @@ import ChevronRight from '../../images/chevron-right-fill.svg'
 
 const Content = [
   {
-    title: 'CTR Values and Principles',
+    title: '1. CTR Values and Principles',
     subtitle: 'The Foundation',
     text: 'Integrity, Social Responsibility, Ethical Behaviour and Accountability.',
   },
   {
-    title: 'The Problem We Can Resolve',
+    title: '2. The Problem We Can Resolve',
     subtitle: 'Global Challenges Exist',
     text: 'Lack of Consciousness is only one challenge we face, others include inadequate funding and lack of connection are other pieces.',
   },
   {
-    title: 'Our Belief That CCF Offers A Solution',
+    title: '3. Our Belief That CCF Offers A Solution',
     subtitle: 'The CCF Solutions',
     text: 'We are motivated by passion and purpose to see a transformed world and we are looking for the potential to impact a billion lives or more.',
   },
   {
-    title: 'The CCF Vision and Mission',
+    title: '4. The CCF Vision and Mission',
     subtitle: 'A Guiding Light',
     text: 'Our vision is a community of socially-responsible, impact investors.',
   },
   {
-    title: 'How That Vision Affects Our Execution',
+    title: '5. How That Vision Affects Our Execution',
     subtitle: 'Investment is De-risked',
     text: 'It’s not just numbers and percentages to us, it’s about unlocking the hidden value possessed by the founders and businesses we include in our portfolio.',
   },
   {
-    title: 'What We Mean By Proximity',
+    title: '6. What We Mean By Proximity',
     subtitle: 'It Pays to Care',
     text: 'We are well-connected with a diverse network of influencers, businesses and investors who are open to opportunities at an earlier stage of development.',
   },
   {
-    title: 'Why We Believe In The Triple ROI',
+    title: '7. Why We Believe In The Triple ROI',
     subtitle: 'People. Planet. Profit.',
     text: 'Can you create accountability and transparency, the foundational cornerstones to Conscious Capitalism, to increase in the Triple Bottom Line.',
   },
   {
-    title: 'Our Commitment To Building A Community',
+    title: '8. Our Commitment To Building A Community',
     subtitle: 'A Tribe To Thrive With',
     text: 'Our goal is to foster a thriving community of companies and individuals who are looking to create the impact and live fulfilled.',
   },
@@ -125,7 +125,7 @@ const Values = () => {
       <Row
         grid={1 / 2}
         css={`
-          margin: 10em 0;
+          margin: 0em 0em 10em 0;
         `}
       >
         <Column>

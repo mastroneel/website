@@ -12,43 +12,43 @@ import ChevronRight from '../../images/chevron-right-fill.svg'
 const Content = [
   {
     title: 'CTR Values and Principles',
-    subtitle: 'Who are we?',
-    text: 'CTR Values...',
+    subtitle: 'The Foundation',
+    text: 'Integrity, Social Responsibility, Ethical Behaviour and Accountability.',
   },
   {
     title: 'The Problem We Can Resolve',
-    subtitle: 'Our Problem',
-    text: 'The problem is',
+    subtitle: 'Global Challenges Exist',
+    text: 'Lack of Consciousness is only one challenge we face, others include inadequate funding and lack of connection are other pieces.',
   },
   {
     title: 'Our Belief That CCF Offers A Solution',
-    subtitle: 'Conscious Capital Fund',
-    text: 'Our vision and mission is',
+    subtitle: 'The CCF Solutions',
+    text: 'We are motivated by passion and purpose to see a transformed world and we are looking for the potential to impact a billion lives or more.',
   },
   {
     title: 'The CCF Vision and Mission',
-    subtitle: 'Lorem',
-    text: 'Ipsum',
+    subtitle: 'A Guiding Light',
+    text: 'Our vision is a community of socially-responsible, impact investors.',
   },
   {
     title: 'How That Vision Affects Our Execution',
-    subtitle: 'What we believe in',
-    text: 'Something',
+    subtitle: 'Investment is De-risked',
+    text: 'It’s not just numbers and percentages to us, it’s about unlocking the hidden value possessed by the founders and businesses we include in our portfolio.',
   },
   {
     title: 'What We Mean By Proximity',
-    subtitle: 'What we mean',
-    text: 'Proximity is',
+    subtitle: 'It Pays to Care',
+    text: 'We are well-connected with a diverse network of influencers, businesses and investors who are open to opportunities at an earlier stage of development.',
   },
   {
     title: 'Why We Believe In The Triple ROI',
-    subtitle: 'What we offer',
-    text: 'It is...',
+    subtitle: 'People. Planet. Profit.',
+    text: 'Can you create accountability and transparency, the foundational cornerstones to Conscious Capitalism, to increase in the Triple Bottom Line.',
   },
   {
     title: 'Our Commitment To Building A Community',
-    subtitle: 'What we offer',
-    text: 'It is...',
+    subtitle: 'A Tribe To Thrive With',
+    text: 'Our goal is to foster a thriving community of companies and individuals who are looking to create the impact and live fulfilled.',
   },
 ]
 

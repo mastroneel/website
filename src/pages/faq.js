@@ -70,6 +70,30 @@ const FaqBody = styled.div`
 
     p {
       margin: 0;
+      a {
+        color: ${ props => props.theme.color.pink };
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: ${ props => props.theme.color.pink };
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.25s ease;
+        }
+
+        :hover {
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
     }
   }
 `

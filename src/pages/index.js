@@ -247,7 +247,7 @@ const Index = ({ data }) => {
                     required
                     type="email"
                     name="email"
-                    placeholder="Your Name"
+                    placeholder="Your Email"
                     css={`
                       margin-right: 1em;
                     `}

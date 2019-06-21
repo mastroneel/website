@@ -10,6 +10,61 @@ import SEO from '../components/seo'
 import Heading, { Underline } from '../components/ui/Heading'
 import Button from '../components/ui/Buttons'
 import theme, { devices } from '../theme'
+import InputGroup from '../components/ui/InputGroup'
+
+const Main = styled.div`
+  text-align: center;
+  max-width: 720px;
+  margin: 2em auto;
+
+  h1 {
+    font-size: 7.2rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  strong {
+    color: ${ props => props.theme.color.pink };
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 7px;
+      background-color: ${ props => props.theme.color.pink };
+    }
+  }
+
+  form {
+    background-color: ${ props => rgba(props.theme.color.pink, 0.05) };
+    padding: 2em;
+    margin-top: 2em;
+    position: relative;
+
+    input {
+      background-color: white;
+      border-color: ${ props => props.theme.color.pink };
+      color: ${ props => props.theme.color.blue };
+    }
+
+    label {
+      color: ${ props => props.theme.color.blue };
+      text-align: left;
+    }
+
+    button {
+      position: absolute;
+      right: 8.2%;
+      top: calc(50% - 2px);
+    }
+  }
+`
 
 const Welcome = styled.div`
   background-color: ${ props => props.theme.color.blue };
@@ -19,6 +74,7 @@ const Welcome = styled.div`
   );
   color: #fff;
   padding: 4em;
+  margin-top: 5em;
   position: relative;
   box-shadow: 0 0 0 5px #fff;
 
@@ -34,6 +90,7 @@ const Welcome = styled.div`
   h1 {
     font-size: 4.2rem;
   }
+
   strong {
     font-weight: 700;
     color: ${ props => props.theme.color.pink };
@@ -156,10 +213,19 @@ const Index = ({ data }) => {
       <SEO
         title="Home"
         keywords={[
-          `CTR`, `CTR Capital`, `CTR Venture Capital`, `Conscious Thought Revolution Venture Capital`,
-          `Conscious Thought Revolution Capital`, `ctr.capital`, `Conscious Capital`,
-          `Venture Capital raising human consciousness`, `social impact investing`, `impact investment fund`,
-          `VC improving the world`, `How to invest in impact fund`]}
+          `CTR`,
+          `CTR Capital`,
+          `CTR Venture Capital`,
+          `Conscious Thought Revolution Venture Capital`,
+          `Conscious Thought Revolution Capital`,
+          `ctr.capital`,
+          `Conscious Capital`,
+          `Venture Capital raising human consciousness`,
+          `social impact investing`,
+          `impact investment fund`,
+          `VC improving the world`,
+          `How to invest in impact fund`,
+        ]}
       />
       <Container
         css={`
@@ -167,6 +233,31 @@ const Index = ({ data }) => {
           margin-bottom: ${ props => props.theme.spacing.lg };
         `}
       >
+        <Row>
+          <Column>
+            <Main>
+              <h1>
+                We deploy capital to change the <strong>world</strong>
+              </h1>
+              <p>Want to know more, subscribe and we'll stay in touch</p>
+              <form>
+                <InputGroup>
+                  <label htmlFor="email">Email</label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    placeholder="Your Name"
+                    css={`
+                      margin-right: 1em;
+                    `}
+                  />
+                  <Button appearance="secondary">Sign Up</Button>
+                </InputGroup>
+              </form>
+            </Main>
+          </Column>
+        </Row>
         <Row>
           <Column>
             <Welcome>

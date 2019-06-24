@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${ process.env.NODE_ENV }`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'CTR Capital',
@@ -141,7 +145,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: 'https://capital.us20.list-manage.com/subscribe/post?u=d9334738aae0dbbf985cec350&amp;id=d1125285d4',
+        endpoint: process.env.GATSBY_MAILCHIMP_ENDPOINT,
       },
     },
   ],

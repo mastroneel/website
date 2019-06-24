@@ -10,7 +10,7 @@ import SEO from '../components/seo'
 import Heading, { Underline } from '../components/ui/Heading'
 import Button from '../components/ui/Buttons'
 import theme, { devices } from '../theme'
-import InputGroup from '../components/ui/InputGroup'
+import Newsletter from '../components/Newsletter'
 
 const Main = styled.div`
   text-align: center;
@@ -41,28 +41,8 @@ const Main = styled.div`
     }
   }
 
-  form {
-    background-color: ${ props => rgba(props.theme.color.pink, 0.05) };
-    padding: 2em;
-    margin-top: 2em;
-    position: relative;
-
-    input {
-      background-color: white;
-      border-color: ${ props => props.theme.color.pink };
-      color: ${ props => props.theme.color.blue };
-    }
-
-    label {
-      color: ${ props => props.theme.color.blue };
-      text-align: left;
-    }
-
-    button {
-      position: absolute;
-      right: 8.2%;
-      top: calc(50% - 2px);
-    }
+  @media (${ devices.tablet }) {
+    margin: 0 auto;
   }
 `
 
@@ -229,7 +209,6 @@ const Index = ({ data }) => {
       />
       <Container
         css={`
-          margin-top: ${ props => props.theme.spacing.xl };
           margin-bottom: ${ props => props.theme.spacing.lg };
         `}
       >
@@ -239,22 +218,8 @@ const Index = ({ data }) => {
               <h1>
                 We deploy capital to change the <strong>world</strong>
               </h1>
-              <p>Want to know more, subscribe and we'll stay in touch</p>
-              <form>
-                <InputGroup>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    required
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    css={`
-                      margin-right: 1em;
-                    `}
-                  />
-                  <Button appearance="secondary">Sign Up</Button>
-                </InputGroup>
-              </form>
+              <p>Want to know more? Subscribe and we'll stay in touch</p>
+              <Newsletter />
             </Main>
           </Column>
         </Row>

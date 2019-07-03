@@ -194,6 +194,12 @@ class Navigation extends Component {
           >
             About
           </Link>
+          <Link
+            activeClassName="active"
+            to="https://medium.com/@ctr.capital"
+          >
+            Blog
+          </Link>
           <Button
             as="a"
             appearance="primary"

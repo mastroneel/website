@@ -139,7 +139,6 @@ module.exports = {
         // Specify optional GTM environment details.
         gtmAuth: 'ryZWMYNq_FGo_YbcgchEXg',
         gtmPreview: 'env-2',
-        dataLayerName: 'GTM-MQNKZBH',
       },
     },
     {

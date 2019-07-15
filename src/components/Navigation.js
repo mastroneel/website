@@ -196,7 +196,8 @@ class Navigation extends Component {
           </Link>
           <Link
             activeClassName="active"
-            to="https://medium.com/@ctr.capital"
+            href="https://medium.com/@ctr.capital"
+            target="_blank"
           >
             Blog
           </Link>

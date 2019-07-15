@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
+import LinkOut from '../components/ui/forms/LinkOut'
 import styled from 'styled-components'
 import { rgba, stripUnit } from 'polished'
 import theme, { devices } from '../theme'
@@ -194,13 +195,11 @@ class Navigation extends Component {
           >
             About
           </Link>
-          <Link
-            activeClassName="active"
-            href="https://medium.com/@ctr.capital"
-            target="_blank"
+          <LinkOut
+            to="https://medium.com/@ctr.capital"
           >
             Blog
-          </Link>
+          </LinkOut>
           <Button
             as="a"
             appearance="primary"
